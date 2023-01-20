@@ -1,0 +1,105 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="17423e3c-6d0c-4e12-ae57-4c43fec18c34" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DWHCube</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fact Calisan</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="88a71235-ac1e-4a6f-bb31-5e75fa56adae">
+          <ID>Fact Calisan</ID>
+          <Name>Fact Calisan</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c4777e4c-5533-4d70-8335-c2a069519f78">
+            <DataSourceViewID>DWHViews</DataSourceViewID>
+            <TableID>dbo_FactCalisan</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Kredi Kart</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="b732cb4f-6159-49bb-9085-a81ea338b3b5">
+          <ID>Fact Kredi Kart</ID>
+          <Name>Fact Kredi Kart</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="4c6e5708-6a0a-4cbe-81de-0a6e87d58371">
+            <DataSourceViewID>DWHViews</DataSourceViewID>
+            <TableID>dbo_FactKrediKart</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Musteri</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="a1dc7aa9-1643-4463-b493-aa0dc69f3e41">
+          <ID>Fact Musteri</ID>
+          <Name>Fact Musteri</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="acc58e08-cc4e-4588-a333-4658a6f5cd3a">
+            <DataSourceViewID>DWHViews</DataSourceViewID>
+            <TableID>dbo_FactMusteri</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Oda</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="0c17ad77-2487-445a-92da-09932f220cb1">
+          <ID>Fact Oda</ID>
+          <Name>Fact Oda</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="1ea26cdf-f61f-4b67-94ab-0aca8a175814">
+            <DataSourceViewID>DWHViews</DataSourceViewID>
+            <TableID>dbo_FactOda</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Rezervasyon</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="0c52dcf6-63c5-475a-a529-55dea76815be">
+          <ID>Fact Rezervasyon</ID>
+          <Name>Fact Rezervasyon</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="0b98ddca-4a51-4dce-8a86-417b05e06f2e">
+            <DataSourceViewID>DWHViews</DataSourceViewID>
+            <TableID>dbo_FactRezervasyon.</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

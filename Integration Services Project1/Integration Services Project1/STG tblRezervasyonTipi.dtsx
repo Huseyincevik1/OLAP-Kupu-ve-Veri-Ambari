@@ -1,0 +1,510 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/4/2022 12:57:39 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-1E3PP0A"
+  DTS:CreatorName="DESKTOP-1E3PP0A\gbh"
+  DTS:DTSID="{E4BD2BDC-D970-4118-AB34-1976034F34E4}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.948.0"
+  DTS:LocaleID="1055"
+  DTS:ObjectName="STG tblRezervasyonTipi"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{55585890-4CDF-4338-8759-E72414397B5A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.OTEL]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CBB8E7D1-2C91-43C2-BDE0-D09D2FB83B67}"
+      DTS:ObjectName="LocalHost.OTEL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=OTEL;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{CBB8E7D1-2C91-43C2-BDE0-D09D2FB83B67}LocalHost.OTEL;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.STAGING]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A68630FE-713C-41BF-BDC6-62663A0E2DFC}"
+      DTS:ObjectName="LocalHost.STAGING">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=STAGING;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{A68630FE-713C-41BF-BDC6-62663A0E2DFC}LocalHost.STAGING;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{24712D73-39A6-482B-B269-80D1147CDBDB}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OTEL tblRezervasyonTipi Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT  [rezervasyonTipiID]
+      ,[rezervasyonTipiAd]
+      ,[indirimYuzdesi]
+  FROM [dbo].[tblRezervasyonTipi]</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1254</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.OTEL]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.OTEL]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output].Columns[rezervasyonTipiID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output].ExternalColumns[rezervasyonTipiID]"
+                      lineageId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output].Columns[rezervasyonTipiID]"
+                      name="rezervasyonTipiID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output].Columns[rezervasyonTipiAd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output].ExternalColumns[rezervasyonTipiAd]"
+                      length="30"
+                      lineageId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output].Columns[rezervasyonTipiAd]"
+                      name="rezervasyonTipiAd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output].Columns[indirimYuzdesi]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output].ExternalColumns[indirimYuzdesi]"
+                      lineageId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output].Columns[indirimYuzdesi]"
+                      name="indirimYuzdesi"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output].ExternalColumns[rezervasyonTipiID]"
+                      dataType="i4"
+                      name="rezervasyonTipiID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output].ExternalColumns[rezervasyonTipiAd]"
+                      dataType="wstr"
+                      length="30"
+                      name="rezervasyonTipiAd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output].ExternalColumns[indirimYuzdesi]"
+                      dataType="r8"
+                      name="indirimYuzdesi" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Error Output].Columns[rezervasyonTipiID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Error Output].Columns[rezervasyonTipiID]"
+                      name="rezervasyonTipiID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Error Output].Columns[rezervasyonTipiAd]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Error Output].Columns[rezervasyonTipiAd]"
+                      name="rezervasyonTipiAd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Error Output].Columns[indirimYuzdesi]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Error Output].Columns[indirimYuzdesi]"
+                      name="indirimYuzdesi" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\STG tblRezervasyonTipi Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="STG tblRezervasyonTipi Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[tblRezervasyonTipi]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1254</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.STAGING]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.STAGING]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Inputs[OLE DB Destination Input].Columns[rezervasyonTipiID]"
+                      cachedDataType="i4"
+                      cachedName="rezervasyonTipiID"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Inputs[OLE DB Destination Input].ExternalColumns[rezervasyonTipiID]"
+                      lineageId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output].Columns[rezervasyonTipiID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Inputs[OLE DB Destination Input].Columns[rezervasyonTipiAd]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="rezervasyonTipiAd"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Inputs[OLE DB Destination Input].ExternalColumns[rezervasyonTipiAd]"
+                      lineageId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output].Columns[rezervasyonTipiAd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Inputs[OLE DB Destination Input].Columns[indirimYuzdesi]"
+                      cachedDataType="r8"
+                      cachedName="indirimYuzdesi"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Inputs[OLE DB Destination Input].ExternalColumns[indirimYuzdesi]"
+                      lineageId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output].Columns[indirimYuzdesi]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Inputs[OLE DB Destination Input].ExternalColumns[rezervasyonTipiID]"
+                      dataType="i4"
+                      name="rezervasyonTipiID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Inputs[OLE DB Destination Input].ExternalColumns[rezervasyonTipiAd]"
+                      dataType="wstr"
+                      length="30"
+                      name="rezervasyonTipiAd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Inputs[OLE DB Destination Input].ExternalColumns[indirimYuzdesi]"
+                      dataType="r8"
+                      name="indirimYuzdesi" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\STG tblRezervasyonTipi Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\OTEL tblRezervasyonTipi Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{3E2B5F7F-3EEA-42F8-9ADB-456091BCA518}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A68630FE-713C-41BF-BDC6-62663A0E2DFC}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE tblRezervasyonTipi" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{E38D0563-8BE0-4E21-B6A2-C589AC58A105}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="131.666661434704,97.9333341116376" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="132.499994734923,12.1333334297604" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="214.899994734923,53.7333334297604">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.03333330021968,44.2000006818772"
+              Start="0,0"
+              End="-8.03333330021968,36.7000006818772">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.1000003409386" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.1000003409386"
+                    Point2="0,22.1000003409386"
+                    Point3="-4,22.1000003409386" />
+                  <mssgle:LineSegment
+                    End="-4.03333330021968,22.1000003409386" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.03333330021968,22.1000003409386"
+                    Point2="-8.03333330021968,22.1000003409386"
+                    Point3="-8.03333330021968,26.1000003409386" />
+                  <mssgle:LineSegment
+                    End="-8.03333330021968,36.7000006818772" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="232.8,41.6"
+          Id="Package\Data Flow Task\OTEL tblRezervasyonTipi Source"
+          TopLeft="145.833327538438,45.0666670248244" />
+        <NodeLayout
+          Size="246.4,41.6"
+          Id="Package\Data Flow Task\STG tblRezervasyonTipi Destination"
+          TopLeft="149.999994039536,128.266667686039" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="262.233327538438,86.6666670248244">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.9666665010981,41.6000006612142"
+              Start="0,0"
+              End="10.9666665010981,34.1000006612142">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.8000003306071" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.8000003306071"
+                    Point2="0,20.8000003306071"
+                    Point3="4,20.8000003306071" />
+                  <mssgle:LineSegment
+                    End="6.96666650109813,20.8000003306071" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.96666650109813,20.8000003306071"
+                    Point2="10.9666665010981,20.8000003306071"
+                    Point3="10.9666665010981,24.8000003306071" />
+                  <mssgle:LineSegment
+                    End="10.9666665010981,34.1000006612142" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OTEL tblRezervasyonTipi Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\STG tblRezervasyonTipi Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

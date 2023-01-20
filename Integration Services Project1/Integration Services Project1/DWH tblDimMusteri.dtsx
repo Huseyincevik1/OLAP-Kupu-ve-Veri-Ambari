@@ -1,0 +1,824 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/4/2022 1:44:45 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-1E3PP0A"
+  DTS:CreatorName="DESKTOP-1E3PP0A\gbh"
+  DTS:DTSID="{FCDF7405-EB12-4D6C-8D08-105B0E5DDE41}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.948.0"
+  DTS:LocaleID="1055"
+  DTS:ObjectName="DWH tblDimMusteri"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{B8C22A44-A664-4CB0-9AAD-5306BD9D6C7C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.DWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1C557936-0863-4E02-B2AF-BFFED5FA6294}"
+      DTS:ObjectName="LocalHost.DWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{1C557936-0863-4E02-B2AF-BFFED5FA6294}LocalHost.DWH;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.STAGING]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{745A763D-E1CD-49FA-A3A8-C7FEE796213C}"
+      DTS:ObjectName="LocalHost.STAGING">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=STAGING;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{745A763D-E1CD-49FA-A3A8-C7FEE796213C}LocalHost.STAGING;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{C969BF01-A856-4653-BBC6-03F51B32761C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Telefon]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="Telefon"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[Telefon]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[ePostaAdersi]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="ePostaAdersi"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[ePostaAdersi]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[IletisimBilgileri]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="162"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[IletisimBilgileri]"
+                      name="IletisimBilgileri"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[ePostaAdersi]} + " " + #{Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[Telefon]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ePostaAdersi + " " + Telefon</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\DWH tblDimMusteri Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DWH tblDimMusteri Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimtblMusteri]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1254</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].Columns[MusteriID]"
+                      cachedDataType="i4"
+                      cachedName="MusteriID"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[MusteriID]"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[MusteriID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].Columns[musteriAd]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="musteriAd"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[musteriAd]"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[musteriAd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].Columns[musteriSoyad]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="musteriSoyad"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[musteriSoyad]"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[musteriSoyad]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].Columns[Sifre]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Sifre"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sifre]"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[Sifre]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].Columns[Adres]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Adres"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[Adres]"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[Adres]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].Columns[Telefon]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="Telefon"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[Telefon]"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[Telefon]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].Columns[ePostaAdersi]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="ePostaAdersi"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[ePostaAdersi]"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[ePostaAdersi]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].Columns[KullaniciAdi]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="KullaniciAdi"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[KullaniciAdi]"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[KullaniciAdi]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].Columns[IletisimBilgileri]"
+                      cachedDataType="wstr"
+                      cachedLength="162"
+                      cachedName="IletisimBilgileri"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[IletisimBilgileri]"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[IletisimBilgileri]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[MusteriID]"
+                      dataType="i4"
+                      name="MusteriID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[musteriAd]"
+                      dataType="wstr"
+                      length="50"
+                      name="musteriAd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[musteriSoyad]"
+                      dataType="wstr"
+                      length="50"
+                      name="musteriSoyad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sifre]"
+                      dataType="wstr"
+                      length="50"
+                      name="Sifre" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[Adres]"
+                      dataType="wstr"
+                      length="500"
+                      name="Adres" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[Telefon]"
+                      dataType="wstr"
+                      length="11"
+                      name="Telefon" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[ePostaAdersi]"
+                      dataType="wstr"
+                      length="150"
+                      name="ePostaAdersi" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[KullaniciAdi]"
+                      dataType="wstr"
+                      length="50"
+                      name="KullaniciAdi" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[IletisimBilgileri]"
+                      dataType="wstr"
+                      length="162"
+                      name="IletisimBilgileri" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[DWMusteriID]"
+                      dataType="i4"
+                      name="DWMusteriID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input].ExternalColumns[DWInsertDate]"
+                      dataType="dbTimeStamp"
+                      name="DWInsertDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DWH tblDimMusteri Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DWH tblDimMusteri Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DWH tblDimMusteri Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\STG tblMusteri Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="STG tblMusteri Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [MusteriID]
+      ,[musteriAd]
+      ,[musteriSoyad]
+      ,[Sifre]
+      ,[Adres]
+      ,[Telefon]
+      ,[ePostaAdersi]
+      ,[KullaniciAdi]
+  FROM [dbo].[tblMusteri]</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1254</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\STG tblMusteri Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.STAGING]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.STAGING]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[MusteriID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[MusteriID]"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[MusteriID]"
+                      name="MusteriID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[musteriAd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[musteriAd]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[musteriAd]"
+                      name="musteriAd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[musteriSoyad]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[musteriSoyad]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[musteriSoyad]"
+                      name="musteriSoyad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[Sifre]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[Sifre]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[Sifre]"
+                      name="Sifre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[Adres]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[Adres]"
+                      length="500"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[Adres]"
+                      name="Adres"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[Telefon]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[Telefon]"
+                      length="11"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[Telefon]"
+                      name="Telefon"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[ePostaAdersi]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[ePostaAdersi]"
+                      length="150"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[ePostaAdersi]"
+                      name="ePostaAdersi"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[KullaniciAdi]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[KullaniciAdi]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].Columns[KullaniciAdi]"
+                      name="KullaniciAdi"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[MusteriID]"
+                      dataType="i4"
+                      name="MusteriID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[musteriAd]"
+                      dataType="wstr"
+                      length="50"
+                      name="musteriAd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[musteriSoyad]"
+                      dataType="wstr"
+                      length="50"
+                      name="musteriSoyad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[Sifre]"
+                      dataType="wstr"
+                      length="50"
+                      name="Sifre" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[Adres]"
+                      dataType="wstr"
+                      length="500"
+                      name="Adres" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[Telefon]"
+                      dataType="wstr"
+                      length="11"
+                      name="Telefon" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[ePostaAdersi]"
+                      dataType="wstr"
+                      length="150"
+                      name="ePostaAdersi" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output].ExternalColumns[KullaniciAdi]"
+                      dataType="wstr"
+                      length="50"
+                      name="KullaniciAdi" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[MusteriID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[MusteriID]"
+                      name="MusteriID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[musteriAd]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[musteriAd]"
+                      name="musteriAd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[musteriSoyad]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[musteriSoyad]"
+                      name="musteriSoyad" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[Sifre]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[Sifre]"
+                      name="Sifre" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[Adres]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[Adres]"
+                      name="Adres" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[Telefon]"
+                      dataType="wstr"
+                      length="11"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[Telefon]"
+                      name="Telefon" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[ePostaAdersi]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[ePostaAdersi]"
+                      name="ePostaAdersi" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[KullaniciAdi]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[KullaniciAdi]"
+                      name="KullaniciAdi" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\DWH tblDimMusteri Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\STG tblMusteri Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9060C254-E2E9-40E6-BE10-43EFBB0F89E4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{1C557936-0863-4E02-B2AF-BFFED5FA6294}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE tblDimMusteri" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{5121EC5C-7EB7-4036-B99E-0013F79B6B09}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="204.999995260012,104.05098141427" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="231.428575369777,21.4117650061743" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="312.628575369777,63.0117650061743">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-32.4285801097646,41.0392164080952"
+              Start="0,0"
+              End="-32.4285801097646,33.5392164080952">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5196082040476" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5196082040476"
+                    Point2="0,20.5196082040476"
+                    Point3="-4,20.5196082040476" />
+                  <mssgle:LineSegment
+                    End="-28.4285801097646,20.5196082040476" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-28.4285801097646,20.5196082040476"
+                    Point2="-32.4285801097646,20.5196082040476"
+                    Point3="-32.4285801097646,24.5196082040476" />
+                  <mssgle:LineSegment
+                    End="-32.4285801097646,33.5392164080952" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="224.8,41.6"
+          Id="Package\Data Flow Task\DWH tblDimMusteri Destination"
+          TopLeft="163.33332684305,209.733335000144" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="162.6190411166,107.364706661253" />
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\Data Flow Task\STG tblMusteri Source"
+          TopLeft="140.83332773712,29.4666669008467" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="235.72618442686,71.0666669008467">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.2980397604059"
+              Start="0,0"
+              End="0,28.7980397604059">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.7980397604059" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="239.0190411166,148.964706661253">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="36.7142857264499,60.7686283388914"
+              Start="0,0"
+              End="36.7142857264499,53.2686283388914">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.3843141694457" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.3843141694457"
+                    Point2="0,30.3843141694457"
+                    Point3="4,30.3843141694457" />
+                  <mssgle:LineSegment
+                    End="32.7142857264499,30.3843141694457" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.7142857264499,30.3843141694457"
+                    Point2="36.7142857264499,30.3843141694457"
+                    Point3="36.7142857264499,34.3843141694457" />
+                  <mssgle:LineSegment
+                    End="36.7142857264499,53.2686283388914" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\DWH tblDimMusteri Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\STG tblMusteri Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

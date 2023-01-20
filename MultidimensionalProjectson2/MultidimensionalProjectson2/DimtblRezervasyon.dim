@@ -1,0 +1,328 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d3ae5289-c510-4d28-95e2-5ccf2d79df22" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DimtblRezervasyon</ID>
+  <Name>DimtblRezervasyon</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="f5d8b59f-d84d-4eba-ae28-be444c609c84">
+    <DataSourceViewID>DWHViews</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="f8e992f1-6890-48ae-b449-6d458faf4c98">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="617e0969-2997-4cab-9b38-f075348e8ede">
+      <ID>Rezervasyon ID</ID>
+      <Name>Rezervasyon ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="df2e43ba-6388-442c-b0d2-229cdc168cd6">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ffefa4c1-8ad0-4e7a-b98e-48f417baadae">
+            <TableID>dbo_DimtblRezervasyon</TableID>
+            <ColumnID>rezervasyonID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="7f3d2775-85ad-4e7b-a43f-78bcb883051b">
+          <AttributeID>DW Rezervasyon ID</AttributeID>
+          <Name>DW Rezervasyon ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3014618d-f88b-41f7-8b16-493b714e8fd5">
+          <AttributeID>Rezervasyon Tarih</AttributeID>
+          <Name>Rezervasyon Tarih</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1356c38a-7c4d-4e8d-96a3-c1f4505a6d59">
+          <AttributeID>Gelis Tarih</AttributeID>
+          <Name>Gelis Tarih</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e20bbc68-f588-4707-9d91-8ddca5adfe22">
+          <AttributeID>Gidis Tarih</AttributeID>
+          <Name>Gidis Tarih</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9dfff768-be94-4cb0-8864-304a7cb86873">
+          <AttributeID>İptal Mi</AttributeID>
+          <Name>İptal Mi</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3a64f4fd-94b3-4c60-b043-514bee0858a0">
+          <AttributeID>Erteleme Tarih</AttributeID>
+          <Name>Erteleme Tarih</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="17efc6ec-fa63-421c-ac80-de220ae0a96b">
+          <AttributeID>Taban Fiyat</AttributeID>
+          <Name>Taban Fiyat</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="efa90119-edb9-4ad7-b902-d3cf2d2fee97">
+          <AttributeID>Kalma Fiyat</AttributeID>
+          <Name>Kalma Fiyat</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f17a943a-32fb-4551-a504-a52fc485c193">
+          <AttributeID>Musteri ID</AttributeID>
+          <Name>Musteri ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f9208f47-4490-4a65-9f95-4cfe0f541522">
+          <AttributeID>Rezervasyon Tipi ID</AttributeID>
+          <Name>Rezervasyon Tipi ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5d7b787f-b7bd-4ba0-afe0-9fa8d4ca515d">
+          <AttributeID>Oda NO</AttributeID>
+          <Name>Oda NO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="edf85852-bccd-4732-aca4-f0209486fd58">
+          <AttributeID>DW Insert Date</AttributeID>
+          <Name>DW Insert Date</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="80e35288-fbf0-4a3a-8925-2fbdd0ef8c96">
+      <ID>DW Rezervasyon ID</ID>
+      <Name>DW Rezervasyon ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="64253f78-b7eb-4d56-a739-894069a193f9">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d0d895c7-ef90-4b02-9821-1dbeaf6277b8">
+            <TableID>dbo_DimtblRezervasyon</TableID>
+            <ColumnID>DWRezervasyonID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3c06350d-3df6-4511-9035-650e32fb9d7a">
+      <ID>Rezervasyon Tarih</ID>
+      <Name>Rezervasyon Tarih</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="451e2da4-d32d-4dd8-afa2-c033f48a4f56">
+          <DataType>Date</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6b1a05e2-2805-4337-bbfd-699335d348fb">
+            <TableID>dbo_DimtblRezervasyon</TableID>
+            <ColumnID>rezervasyonTarih</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="483827fe-2e13-47b3-a7bf-8ef9af713b40">
+      <ID>Gelis Tarih</ID>
+      <Name>Gelis Tarih</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a08bed90-deb4-46bc-82a8-edaa5cb5e585">
+          <DataType>Date</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="935503a2-0a1f-438d-b3d8-04fcddbdc168">
+            <TableID>dbo_DimtblRezervasyon</TableID>
+            <ColumnID>gelisTarih</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e4bc6d7f-3136-46ee-8474-c5104b6e9b2f">
+      <ID>Gidis Tarih</ID>
+      <Name>Gidis Tarih</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="aadff0d5-a695-4467-84c2-ec3671b688aa">
+          <DataType>Date</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="56c76053-c802-4f9a-be4e-997f107a15d8">
+            <TableID>dbo_DimtblRezervasyon</TableID>
+            <ColumnID>gidisTarih</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="95a6dc2f-dd27-4e43-a9da-979596fc39b1">
+      <ID>İptal Mi</ID>
+      <Name>İptal Mi</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6f2fe814-4776-48a2-9206-e8e2782f2918">
+          <DataType>Boolean</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="01bf032f-92d1-4470-8398-8e9c6e8d04de">
+            <TableID>dbo_DimtblRezervasyon</TableID>
+            <ColumnID>iptalMi</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0553a746-5d58-41b6-8ba1-7c1403bf8b8a">
+      <ID>Erteleme Tarih</ID>
+      <Name>Erteleme Tarih</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b472255d-ce84-4cd5-9f4a-c9c3acb4be8d">
+          <DataType>Date</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ebe29183-2795-4d2f-adb1-d75a11db35d1">
+            <TableID>dbo_DimtblRezervasyon</TableID>
+            <ColumnID>ertelemeTarih</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5fe1b9e4-f0f7-4703-a0d1-835b1213a0e2">
+      <ID>Taban Fiyat</ID>
+      <Name>Taban Fiyat</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ff607732-9518-45d2-a8bf-fb4e86a0440e">
+          <DataType>Double</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1f6db656-21a6-4b49-99a6-7c6e166f81dc">
+            <TableID>dbo_DimtblRezervasyon</TableID>
+            <ColumnID>tabanFiyat</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9a505b6d-8780-43b0-8064-ca2a2adbaf2a">
+      <ID>Kalma Fiyat</ID>
+      <Name>Kalma Fiyat</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fef9636a-e88d-4cff-a853-fcf907f1a9cf">
+          <DataType>Double</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a78be608-5667-4628-b520-02bc3697cb7e">
+            <TableID>dbo_DimtblRezervasyon</TableID>
+            <ColumnID>kalmaFiyat</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0252ba50-c8b0-445d-9780-fc12e1ce9fcb">
+      <ID>Musteri ID</ID>
+      <Name>Musteri ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="01b74f89-66bd-48d8-8756-1e0972525001">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d5f1a0e5-f6c7-4697-8fd7-3e8249174cc3">
+            <TableID>dbo_DimtblRezervasyon</TableID>
+            <ColumnID>musteriID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b57fde44-76ca-4159-aa94-d9ba1d1fd345">
+      <ID>Rezervasyon Tipi ID</ID>
+      <Name>Rezervasyon Tipi ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="91d4770e-19c4-406a-a335-bb3b0c558fd4">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5012fe63-8266-472f-a0c1-b37f390845d3">
+            <TableID>dbo_DimtblRezervasyon</TableID>
+            <ColumnID>rezervasyonTipiID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5baf3a69-6261-4beb-9302-5d04f81392be">
+      <ID>Oda NO</ID>
+      <Name>Oda NO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6b4c19bd-b014-4563-af55-ce1d2f8adb19">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b8066a5c-895b-4dbb-a741-03990ff685b0">
+            <TableID>dbo_DimtblRezervasyon</TableID>
+            <ColumnID>odaNO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="dfa441d5-b5c7-4dc8-9498-d01f2af8fba8">
+      <ID>DW Insert Date</ID>
+      <Name>DW Insert Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="86e39261-259a-439c-8c92-05dcbad5e05c">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="54e05b57-492d-4976-9121-d42d5ff6ea4b">
+            <TableID>dbo_DimtblRezervasyon</TableID>
+            <ColumnID>DWInsertDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

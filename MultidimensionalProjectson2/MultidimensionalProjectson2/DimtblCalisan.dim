@@ -1,0 +1,227 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c54d9604-cfeb-4f26-b2d7-aedcb89ed74a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DimtblCalisan</ID>
+  <Name>DimtblCalisan</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="89d27382-4a86-476d-9b10-6f772e96df93">
+    <DataSourceViewID>DWHViews</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="e645b846-46b4-428a-be7f-98e34005286a">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="83a2b008-888e-420d-b823-b42b3c106a48">
+      <ID>Calisan ID</ID>
+      <Name>Calisan ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d380d0bf-7678-4c47-a0ab-ae779873883f">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3d5ae19c-8b93-429c-ad11-c8eab6d61282">
+            <TableID>dbo_DimtblCalisan</TableID>
+            <ColumnID>calisanID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="37d498a2-0cd0-40f4-90e3-8646fb8dbfc4">
+          <AttributeID>DW Calisan ID</AttributeID>
+          <Name>DW Calisan ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7713ce21-f132-40f0-8976-3d84b91c7894">
+          <AttributeID>Calisan Ad</AttributeID>
+          <Name>Calisan Ad</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7629a318-640d-48c0-88ea-1d7aa618e3a2">
+          <AttributeID>Calisan Soyad</AttributeID>
+          <Name>Calisan Soyad</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d13508ec-5969-4928-95e2-034a79d1621c">
+          <AttributeID>Sifre</AttributeID>
+          <Name>Sifre</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2d927cd3-fd53-4e17-a657-16f06dcfc0f8">
+          <AttributeID>Calisan Tipi ID</AttributeID>
+          <Name>Calisan Tipi ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="49012fd9-f3df-4e75-afa6-47aea7159a34">
+          <AttributeID>e Posta Adersi</AttributeID>
+          <Name>e Posta Adersi</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0d382912-d946-40d5-b98b-2c2f5f98c3f7">
+          <AttributeID>DW Insert Date</AttributeID>
+          <Name>DW Insert Date</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e18adce3-05ae-4e8c-a746-8d19ed8b0729">
+      <ID>DW Calisan ID</ID>
+      <Name>DW Calisan ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6998fe6b-ccb5-4ffd-9ae6-bd3b83bbed1a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a0d766e9-53fa-434c-aeff-a438a1148a71">
+            <TableID>dbo_DimtblCalisan</TableID>
+            <ColumnID>DWCalisanID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="41e22bc9-130c-4c6f-9ccc-7e773b9ad98d">
+      <ID>Calisan Ad</ID>
+      <Name>Calisan Ad</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fb7e52b9-0af5-44d1-93e4-7c199140fcc9">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6ab04129-3f19-4eb0-8c98-6fbd646861c1">
+            <TableID>dbo_DimtblCalisan</TableID>
+            <ColumnID>calisanAd</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5bb61afc-4c0e-4ca1-aa42-46986f00c047">
+      <ID>Calisan Soyad</ID>
+      <Name>Calisan Soyad</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8083212d-effa-47d5-8b26-1fab8f939dc6">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="81779a7a-9e56-415e-af41-e925f5cf7e5c">
+            <TableID>dbo_DimtblCalisan</TableID>
+            <ColumnID>calisanSoyad</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a834010a-b538-4147-9ac3-be54dc19a6af">
+      <ID>Sifre</ID>
+      <Name>Sifre</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e7d272d6-c1ec-4d7f-90a6-99f28a1e6d7c">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="95098370-fa5d-4518-a6c3-10aeb56b8b56">
+            <TableID>dbo_DimtblCalisan</TableID>
+            <ColumnID>Sifre</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="423e32a1-f329-4014-bd58-6510292274ba">
+      <ID>Calisan Tipi ID</ID>
+      <Name>Calisan Tipi ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="378b077b-d1ae-44ac-bd6f-6128abb5cb05">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b0015ecb-3b51-41bc-b658-672d55185276">
+            <TableID>dbo_DimtblCalisan</TableID>
+            <ColumnID>calisanTipiID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5f172f8c-e5f7-4e43-bb88-01e0a5fc96b3">
+      <ID>e Posta Adersi</ID>
+      <Name>e Posta Adersi</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5f83af5b-8334-4481-b924-c8dd167137b8">
+          <DataType>WChar</DataType>
+          <DataSize>150</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f07d6bb2-fb8d-4487-b1e8-1b1cf428fe43">
+            <TableID>dbo_DimtblCalisan</TableID>
+            <ColumnID>ePostaAdersi</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="61e25024-ea42-4070-b419-19b3b0d9b648">
+      <ID>DW Insert Date</ID>
+      <Name>DW Insert Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b6f23e6e-f82b-4483-b902-a7fa494ab498">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="64dd3526-c874-4cfd-8c83-16494ef4fadf">
+            <TableID>dbo_DimtblCalisan</TableID>
+            <ColumnID>DWInsertDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

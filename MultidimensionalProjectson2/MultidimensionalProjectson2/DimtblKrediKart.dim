@@ -1,0 +1,181 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="37ebe3b9-d528-41bd-a291-f599d79f4924" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DimtblKrediKart</ID>
+  <Name>DimtblKrediKart</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="ea3974e2-d23f-4e42-9659-c09bfb9248f2">
+    <DataSourceViewID>DWHViews</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="bc763bf3-7aaa-45ed-a3de-765b9221c626">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="8dcb23c7-95c3-45a2-93fe-6fef6320ee8a">
+      <ID>Kart NO</ID>
+      <Name>Kart NO</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9e8f1f99-b90f-4bbf-b2dd-2aa0d80b37a6">
+          <DataType>WChar</DataType>
+          <DataSize>16</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bd3f9643-f66e-429f-9e1b-03c82edb1e21">
+            <TableID>dbo_DimtblKrediKart</TableID>
+            <ColumnID>kartNO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="8fa4064a-1816-4c93-b582-ddc5fb12e95e">
+          <AttributeID>DW Kart NO</AttributeID>
+          <Name>DW Kart NO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5b113a88-071a-402a-bbea-4a43014042a4">
+          <AttributeID>Sonkullanim Tarih</AttributeID>
+          <Name>Sonkullanim Tarih</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2f4164bb-145d-491b-bd0f-efb7f37ecabe">
+          <AttributeID>Guvenlik Kod</AttributeID>
+          <Name>Guvenlik Kod</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1749f068-0b45-4d70-9ea6-5d28eb9cbe03">
+          <AttributeID>Musteri ID</AttributeID>
+          <Name>Musteri ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="afa16515-04da-4f4c-a546-b2c6cab0a8f7">
+          <AttributeID>DW Insert Date</AttributeID>
+          <Name>DW Insert Date</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4b57a514-a768-424b-88fd-39408c34cf8d">
+      <ID>DW Kart NO</ID>
+      <Name>DW Kart NO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8aacb042-4d05-42ec-b110-52cc1a2233b6">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="91f325ed-924b-4d39-bcf8-c314e2684c15">
+            <TableID>dbo_DimtblKrediKart</TableID>
+            <ColumnID>DWKartNO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1cbc4894-6ad5-46e1-9ba2-bd004d802a98">
+      <ID>Sonkullanim Tarih</ID>
+      <Name>Sonkullanim Tarih</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="002abb6b-2be0-4943-8bf1-2f6ea7f27c5f">
+          <DataType>Date</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="aa25f631-abaf-42fe-a60d-4558a1f1a3c8">
+            <TableID>dbo_DimtblKrediKart</TableID>
+            <ColumnID>sonkullanimTarih</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b799c1f6-cba0-447f-90e3-be894f702924">
+      <ID>Guvenlik Kod</ID>
+      <Name>Guvenlik Kod</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3a2e0537-6ff7-4c15-9bb9-31da1a99dfd3">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="37c81e27-31c1-465b-8b9f-862e4a4255e3">
+            <TableID>dbo_DimtblKrediKart</TableID>
+            <ColumnID>guvenlikKod</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b109c756-9e5a-4dfe-97a9-3cb474c306f6">
+      <ID>Musteri ID</ID>
+      <Name>Musteri ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="15cbc20a-768a-4999-8f7f-dba8bf6d7718">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="baaead24-6770-47da-a329-ed647ea91237">
+            <TableID>dbo_DimtblKrediKart</TableID>
+            <ColumnID>musteriID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="58ba7100-baf7-47e6-8e17-44fdff6fda58">
+      <ID>DW Insert Date</ID>
+      <Name>DW Insert Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="346565a8-02d6-4183-8520-37f251985eb7">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d1a8c227-478d-4ef5-a6ca-f1221ccfd397">
+            <TableID>dbo_DimtblKrediKart</TableID>
+            <ColumnID>DWInsertDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

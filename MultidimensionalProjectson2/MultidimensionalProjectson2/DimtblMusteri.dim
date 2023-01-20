@@ -1,0 +1,293 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c93d00ad-a8a7-4ade-a4fe-2b6f8f987d6e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DimtblMusteri</ID>
+  <Name>DimtblMusteri</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="fd639e41-c36a-409f-97d5-58d1d2dfe0f9">
+    <DataSourceViewID>DWHViews</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="8e1bf07e-8b31-4d05-a458-d7589ed2642e">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="7db0a1f1-2a2b-4db1-a7db-89a95153d42c">
+      <ID>Musteri ID</ID>
+      <Name>Musteri ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ffe116b4-cdaa-4287-8c88-60efbf923bc2">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="849dc98f-c445-4afd-85f1-0f75ccdf6fb4">
+            <TableID>dbo_DimtblMusteri</TableID>
+            <ColumnID>MusteriID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="4ea8e6d1-a312-4d4e-953d-efddb64d1515">
+          <AttributeID>DW Musteri ID</AttributeID>
+          <Name>DW Musteri ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3d14328d-dbc0-4d82-88fc-d623384ad362">
+          <AttributeID>Musteri Ad</AttributeID>
+          <Name>Musteri Ad</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8c19c30b-1c8f-4988-9255-f4b8463bdd3e">
+          <AttributeID>Musteri Soyad</AttributeID>
+          <Name>Musteri Soyad</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="df8c7d30-8365-4182-82ba-c5ce7dd7e6c0">
+          <AttributeID>Sifre</AttributeID>
+          <Name>Sifre</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7d9a561f-a3e6-4329-aa53-74350e10f8ee">
+          <AttributeID>Adres</AttributeID>
+          <Name>Adres</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f993a87e-81f8-4207-91af-64c544d6d74a">
+          <AttributeID>Telefon</AttributeID>
+          <Name>Telefon</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1e7ae5c3-b6c3-47d6-a5e7-cb8914df6671">
+          <AttributeID>e Posta Adersi</AttributeID>
+          <Name>e Posta Adersi</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e88bd3bb-258b-430c-a3dd-cf23e08b6670">
+          <AttributeID>Kullanici Adi</AttributeID>
+          <Name>Kullanici Adi</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b062ee25-145f-4f7b-8e4e-bed28f187065">
+          <AttributeID>Iletisim Bilgileri</AttributeID>
+          <Name>Iletisim Bilgileri</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="974c4ec9-4cc7-4e08-9488-5adb9f945488">
+          <AttributeID>DW Insert Date</AttributeID>
+          <Name>DW Insert Date</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a5d96690-b9b0-4dad-8f29-dbec59f3b723">
+      <ID>DW Musteri ID</ID>
+      <Name>DW Musteri ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3d196194-11fa-4c48-a08a-e6d2515d1dab">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="50fc5e55-5d30-45a2-aa3a-fb1ceb4d2d0f">
+            <TableID>dbo_DimtblMusteri</TableID>
+            <ColumnID>DWMusteriID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e346205d-f86a-479b-a35e-a38ca27fb13b">
+      <ID>Musteri Ad</ID>
+      <Name>Musteri Ad</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c539239e-ea7a-45dc-aa8d-2469c20c210b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b9873ed0-3f98-47be-84e5-ce4c031d9350">
+            <TableID>dbo_DimtblMusteri</TableID>
+            <ColumnID>musteriAd</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ef24a463-1f6a-445b-b49c-344e5b2a6dcb">
+      <ID>Musteri Soyad</ID>
+      <Name>Musteri Soyad</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b2c41c5e-78d5-428c-a298-e31d8903edbc">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e3759299-5fb8-4fac-b9c0-39ee31009b09">
+            <TableID>dbo_DimtblMusteri</TableID>
+            <ColumnID>musteriSoyad</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6fa68090-84ec-4dd8-ad45-02f48ba3719a">
+      <ID>Sifre</ID>
+      <Name>Sifre</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="15f37006-f7d2-4d36-aeb1-62cb9c9ab966">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="377744c6-8b58-443c-93d8-e1884c04b221">
+            <TableID>dbo_DimtblMusteri</TableID>
+            <ColumnID>Sifre</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="39a2a7e2-1627-4056-abc6-fe5735ca69be">
+      <ID>Adres</ID>
+      <Name>Adres</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9a48562e-a421-47ee-a517-28a41696cce5">
+          <DataType>WChar</DataType>
+          <DataSize>500</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="319a50cf-a58c-4530-9175-ff7a88b29d4c">
+            <TableID>dbo_DimtblMusteri</TableID>
+            <ColumnID>Adres</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="41f3d8e7-92b5-4a40-af71-16ec8405829c">
+      <ID>Telefon</ID>
+      <Name>Telefon</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="10967ad6-edaa-4059-9910-3fc5e9c7473f">
+          <DataType>WChar</DataType>
+          <DataSize>11</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2aa1850b-b5d5-42a3-be5b-c11fba691916">
+            <TableID>dbo_DimtblMusteri</TableID>
+            <ColumnID>Telefon</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="30498321-31b2-4480-9d75-8d710f56c7a9">
+      <ID>e Posta Adersi</ID>
+      <Name>e Posta Adersi</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="57e70f27-1118-4045-9775-1bcb0dac7e12">
+          <DataType>WChar</DataType>
+          <DataSize>150</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6ddea751-5462-40ec-a73f-d7ec5e322157">
+            <TableID>dbo_DimtblMusteri</TableID>
+            <ColumnID>ePostaAdersi</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="61319cad-b408-48f1-b169-2cb0eb866c5d">
+      <ID>Kullanici Adi</ID>
+      <Name>Kullanici Adi</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7cb9f60f-b0e4-4ce5-88b4-c9889f4b7403">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c69103f2-f58f-4076-a968-77e4c966bef6">
+            <TableID>dbo_DimtblMusteri</TableID>
+            <ColumnID>KullaniciAdi</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c4db9906-b1e9-4726-af73-411610a55946">
+      <ID>Iletisim Bilgileri</ID>
+      <Name>Iletisim Bilgileri</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="71cde1d3-178b-4d85-9356-e6480bb8bba7">
+          <DataType>WChar</DataType>
+          <DataSize>162</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e71a3559-d67b-4af0-8068-5191faaff3b5">
+            <TableID>dbo_DimtblMusteri</TableID>
+            <ColumnID>IletisimBilgileri</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bd3383d5-15f7-4dd4-9073-7b9191b9fc1b">
+      <ID>DW Insert Date</ID>
+      <Name>DW Insert Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1128763a-bf1f-41e3-9e05-6080d5d54911">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="99b432a4-bbec-4a44-b265-eccbf467996a">
+            <TableID>dbo_DimtblMusteri</TableID>
+            <ColumnID>DWInsertDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

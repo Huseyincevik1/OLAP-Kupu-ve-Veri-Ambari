@@ -1,0 +1,513 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/9/2022 3:47:13 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-1E3PP0A"
+  DTS:CreatorName="DESKTOP-1E3PP0A\gbh"
+  DTS:DTSID="{1C7ACA87-DA7B-4EF6-8C45-B57EB8FD74D8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.948.0"
+  DTS:LocaleID="1055"
+  DTS:ObjectName="DWH tblDimOda"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{D982E80A-122B-4B58-8289-C35E130DC9E3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.DWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{69F98E18-00BE-4EF2-B3D4-67A1E50CC009}"
+      DTS:ObjectName="LocalHost.DWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{69F98E18-00BE-4EF2-B3D4-67A1E50CC009}LocalHost.DWH;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.STAGING]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{18E336F4-291B-4BFE-87D5-1F1CD214AA11}"
+      DTS:ObjectName="LocalHost.STAGING">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=STAGING;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{18E336F4-291B-4BFE-87D5-1F1CD214AA11}LocalHost.STAGING;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E888D4AA-9957-485A-9E23-01DF16133CFA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\DWH tblDimOda Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DWH tblDimOda Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimtblOda]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1254</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\DWH tblDimOda Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\DWH tblDimOda Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimOda Destination.Inputs[OLE DB Destination Input].Columns[odaNO]"
+                      cachedDataType="i4"
+                      cachedName="odaNO"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimOda Destination.Inputs[OLE DB Destination Input].ExternalColumns[odaNO]"
+                      lineageId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output].Columns[odaNO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimOda Destination.Inputs[OLE DB Destination Input].Columns[bosMu]"
+                      cachedDataType="bool"
+                      cachedName="bosMu"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimOda Destination.Inputs[OLE DB Destination Input].ExternalColumns[bosMu]"
+                      lineageId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output].Columns[bosMu]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimOda Destination.Inputs[OLE DB Destination Input].Columns[tabanFiyat]"
+                      cachedDataType="cy"
+                      cachedName="tabanFiyat"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimOda Destination.Inputs[OLE DB Destination Input].ExternalColumns[tabanFiyat]"
+                      lineageId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output].Columns[tabanFiyat]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimOda Destination.Inputs[OLE DB Destination Input].ExternalColumns[odaNO]"
+                      dataType="i4"
+                      name="odaNO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimOda Destination.Inputs[OLE DB Destination Input].ExternalColumns[bosMu]"
+                      dataType="bool"
+                      name="bosMu" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimOda Destination.Inputs[OLE DB Destination Input].ExternalColumns[tabanFiyat]"
+                      dataType="cy"
+                      name="tabanFiyat" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimOda Destination.Inputs[OLE DB Destination Input].ExternalColumns[DWInsertDate]"
+                      dataType="dbTimeStamp"
+                      name="DWInsertDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimOda Destination.Inputs[OLE DB Destination Input].ExternalColumns[DWOdaNO]"
+                      dataType="i4"
+                      name="DWOdaNO" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\DWH tblDimOda Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\DWH tblDimOda Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DWH tblDimOda Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DWH tblDimOda Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DWH tblDimOda Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DWH tblDimOda Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\STG tblOda Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="STG tblOda Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT  [odaNO]
+      ,[bosMu]
+      ,[tabanFiyat]
+  FROM [dbo].[tblOda]</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1254</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\STG tblOda Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.STAGING]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.STAGING]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output].Columns[odaNO]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output].ExternalColumns[odaNO]"
+                      lineageId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output].Columns[odaNO]"
+                      name="odaNO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output].Columns[bosMu]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output].ExternalColumns[bosMu]"
+                      lineageId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output].Columns[bosMu]"
+                      name="bosMu"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output].Columns[tabanFiyat]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output].ExternalColumns[tabanFiyat]"
+                      lineageId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output].Columns[tabanFiyat]"
+                      name="tabanFiyat"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output].ExternalColumns[odaNO]"
+                      dataType="i4"
+                      name="odaNO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output].ExternalColumns[bosMu]"
+                      dataType="bool"
+                      name="bosMu" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output].ExternalColumns[tabanFiyat]"
+                      dataType="cy"
+                      name="tabanFiyat" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Error Output].Columns[odaNO]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Error Output].Columns[odaNO]"
+                      name="odaNO" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Error Output].Columns[bosMu]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Error Output].Columns[bosMu]"
+                      name="bosMu" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Error Output].Columns[tabanFiyat]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Error Output].Columns[tabanFiyat]"
+                      name="tabanFiyat" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\DWH tblDimOda Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\STG tblOda Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E81D0000-AEDD-4D10-A348-CFDE43F24A3E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{69F98E18-00BE-4EF2-B3D4-67A1E50CC009}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE DimtblOda" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{CDB3CEAE-4AA1-4031-99CC-970AEBBCAC85}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="246.428575625225,110.88235449626" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="230.714289643327,24.4705885784849" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="311.914289643327,66.0705885784849">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.71428598189829,44.8117659177747"
+              Start="0,0"
+              End="9.71428598189829,37.3117659177747">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.4058829588874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.4058829588874"
+                    Point2="0,22.4058829588874"
+                    Point3="4,22.4058829588874" />
+                  <mssgle:LineSegment
+                    End="5.71428598189829,22.4058829588874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.71428598189829,22.4058829588874"
+                    Point2="9.71428598189829,22.4058829588874"
+                    Point3="9.71428598189829,26.4058829588874" />
+                  <mssgle:LineSegment
+                    End="9.71428598189829,37.3117659177747" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Data Flow Task\STG tblOda Source"
+          TopLeft="135.714288025486,50.4705889431251" />
+        <NodeLayout
+          Size="211.2,41.6"
+          Id="Package\Data Flow Task\DWH tblDimOda Destination"
+          TopLeft="133.571430846136,121.588236999347" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="219.314288025486,92.070588943125">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.8571428206502,29.5176480562217"
+              Start="0,0"
+              End="19.8571428206502,22.0176480562217">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.7588240281109" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.7588240281109"
+                    Point2="0,14.7588240281109"
+                    Point3="4,14.7588240281109" />
+                  <mssgle:LineSegment
+                    End="15.8571428206502,14.7588240281109" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.8571428206502,14.7588240281109"
+                    Point2="19.8571428206502,14.7588240281109"
+                    Point3="19.8571428206502,18.7588240281109" />
+                  <mssgle:LineSegment
+                    End="19.8571428206502,22.0176480562217" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\DWH tblDimOda Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\STG tblOda Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

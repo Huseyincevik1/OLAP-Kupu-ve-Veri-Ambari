@@ -1,0 +1,2721 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="75d670e0-c71a-45ec-9b0b-44b922869536" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DWHCube</ID>
+  <Name>DWHCube</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="155b7861-83e5-4936-8fdf-0fda598ba929">
+      <ID>Calisan</ID>
+      <Name>Calisan</Name>
+      <DimensionID>DimtblCalisan</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="1dde098e-8be5-4f7b-921c-9bddac2b8872">
+          <AttributeID>Calisan ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bd638d20-ab25-4252-8c8a-a56b2f77f5bd">
+          <AttributeID>DW Calisan ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="68fc0aaa-17cb-4ede-aa74-175a8ae41f9d">
+          <AttributeID>Calisan Ad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="64cc5643-5fb1-4796-8a02-7f0633b758c1">
+          <AttributeID>Calisan Soyad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="55513e8b-644c-4a9e-b197-7dc121406e43">
+          <AttributeID>Sifre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="90ad64a2-f451-4d8e-b607-2450f4a1fc2b">
+          <AttributeID>Calisan Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9ab102a7-759c-4dad-b6bc-85c038608d5b">
+          <AttributeID>e Posta Adersi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1372475b-8ad1-4d34-828d-a96f176d0b0a">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="7b172f88-2170-4dc2-9cf8-94045e0d70da">
+      <ID>Calisan Tipi</ID>
+      <Name>Calisan Tipi</Name>
+      <DimensionID>DimtblCalisan</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a31e2296-51c0-4865-8d6a-c0c9116de15b">
+          <AttributeID>Calisan ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e8c4fa0e-54cf-4a02-861d-5dca6e37f954">
+          <AttributeID>DW Calisan ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c04bd80c-cce9-40fd-bd2f-30ebae52a8a0">
+          <AttributeID>Calisan Ad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8edca259-2994-4320-a1b5-e22c8656b57a">
+          <AttributeID>Calisan Soyad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="755a0bc1-8338-4831-8e01-25caf112437f">
+          <AttributeID>Sifre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4deb0153-f296-45a5-8386-7b4cfc4446f3">
+          <AttributeID>Calisan Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cc959dfe-e963-49dd-a754-6c5dba3bd56a">
+          <AttributeID>e Posta Adersi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e0c27df4-13c1-4ca2-9d84-9f98ed09a093">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e2ea4a31-6e00-43aa-920c-67797b756c79">
+      <ID>Calisan Ad</ID>
+      <Name>Calisan Ad</Name>
+      <DimensionID>DimtblCalisan</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ef59c35f-7da5-4dff-90f1-8e24292b0d65">
+          <AttributeID>Calisan ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aab086c1-6a8d-45aa-a9e8-7cd8cec62753">
+          <AttributeID>DW Calisan ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5d70db27-3571-4e59-b267-68888c412de5">
+          <AttributeID>Calisan Ad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="61127a54-7fde-4e3b-9f12-e967cfc5abd9">
+          <AttributeID>Calisan Soyad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6a6f2465-6bf6-4fbf-8c8d-53dabcf4a32c">
+          <AttributeID>Sifre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="175920a8-8d15-42c5-943e-ffc5d9887415">
+          <AttributeID>Calisan Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0a72e233-8ee2-44ff-b18b-612b7e6febac">
+          <AttributeID>e Posta Adersi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4acdd11d-9fb6-4214-92cd-74741ae154db">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="771256ae-4259-418d-9c0a-0608fdd6a6a7">
+      <ID>Calisan Soyad</ID>
+      <Name>Calisan Soyad</Name>
+      <DimensionID>DimtblCalisan</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="99eff243-c23a-48ae-8efd-6683649052b9">
+          <AttributeID>Calisan ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9def1418-6dd7-456e-92a6-a19414ce8340">
+          <AttributeID>DW Calisan ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="89ba2822-b572-46cf-8a1a-e37a87646771">
+          <AttributeID>Calisan Ad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a7a8be68-0d9d-4999-87e7-febf61cbfa3d">
+          <AttributeID>Calisan Soyad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="07a9efde-bf22-4d44-9725-4e1184383f33">
+          <AttributeID>Sifre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="42f6f389-212e-4d74-8726-1d6dc54f99dd">
+          <AttributeID>Calisan Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cf265b70-a9da-480f-ae59-8eba5871d85b">
+          <AttributeID>e Posta Adersi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="366718b9-ebb8-4e17-b418-d9b930042af2">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="3ef045d7-2a46-4661-a72b-17590b84499e">
+      <ID>e Posta Adersi</ID>
+      <Name>e Posta Adersi</Name>
+      <DimensionID>DimtblCalisan</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="bf1b5ec8-46fa-45e4-bb62-a44a028730a5">
+          <AttributeID>Calisan ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0d532b23-3071-4628-9aa0-782f7082f6d6">
+          <AttributeID>DW Calisan ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="238525d9-335e-40b2-a22f-4845ae7c6059">
+          <AttributeID>Calisan Ad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="636c0c4d-a6ce-471c-be7b-7fe4f4ade372">
+          <AttributeID>Calisan Soyad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5dac13de-e7b9-4f20-94c6-0efc05f3e3fb">
+          <AttributeID>Sifre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="60928d53-b37d-4429-962d-90dd56b3df97">
+          <AttributeID>Calisan Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="932d73b6-cf58-4e86-9143-b85b68218695">
+          <AttributeID>e Posta Adersi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c5fb0815-81b9-4f21-af56-d1bb725b2f34">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ebd6ff4e-c9b4-4c1f-b7f8-36a2e7ca3b17">
+      <ID>Sifre</ID>
+      <Name>Sifre</Name>
+      <DimensionID>DimtblCalisan</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="973769ee-ba34-4181-99b7-bb31de59e6e8">
+          <AttributeID>Calisan ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="55aed0b9-939e-4263-8c8f-f0e6193cf063">
+          <AttributeID>DW Calisan ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9a2b84c7-ffb7-4e0c-a8fc-e6de9d6433c5">
+          <AttributeID>Calisan Ad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="167c6a2d-bbfc-4837-a9db-1e67b276ff79">
+          <AttributeID>Calisan Soyad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c03c5f82-0ca9-4cbd-aa56-0ca9b07c578d">
+          <AttributeID>Sifre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5d96ce94-e40b-4c20-813b-d7de525b0100">
+          <AttributeID>Calisan Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9c207c70-39ae-4432-bea4-1b5c9b701816">
+          <AttributeID>e Posta Adersi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5c5d6156-23ac-444f-a1f1-88ef3fe006b4">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="6e8ef5b6-2f4e-41cc-a35d-5211c97cee97">
+      <ID>DimtblKrediKart</ID>
+      <Name>DimtblKrediKart</Name>
+      <DimensionID>DimtblKrediKart</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="1a7cdbb3-76ea-413b-89b9-502d985063ee">
+          <AttributeID>Kart NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9cdaf31c-f90f-4024-94bc-806be3e452a3">
+          <AttributeID>DW Kart NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="44a4b6f3-d2ae-438e-a9b7-df792e26808a">
+          <AttributeID>Sonkullanim Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7d28aaf7-88ff-452a-89de-735d78aaae3c">
+          <AttributeID>Guvenlik Kod</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e718bfb1-2d39-400d-995f-4df38e090190">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="897072f3-098a-4bba-ad74-2619841477a1">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ef0c7add-c9cb-4e7d-810d-119ee6f51606">
+      <ID>Sonkullanim Tarih</ID>
+      <Name>Sonkullanim Tarih</Name>
+      <DimensionID>DimtblKrediKart</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e9bfa239-4425-4084-b372-87631eafbca5">
+          <AttributeID>Kart NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="59d4e28b-5b68-44af-bb6b-fffc77c32599">
+          <AttributeID>DW Kart NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="de4b023a-f2e1-4f14-a54e-e092438fcc1c">
+          <AttributeID>Sonkullanim Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="83621052-1ba1-43bf-bb0b-f7644d30ada1">
+          <AttributeID>Guvenlik Kod</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bf8f943c-f80e-428b-9287-14abaac1019d">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0e3e5854-58cf-48fa-a1fd-ad234600110f">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="3fd89ceb-4d56-4ea4-a6de-7fc4312ac79f">
+      <ID>Musteri</ID>
+      <Name>Musteri</Name>
+      <DimensionID>DimtblKrediKart</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2c58a05c-44c3-4e37-b479-9c945f690752">
+          <AttributeID>Kart NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="97950180-3b7d-472c-b4df-f1826bc51ee1">
+          <AttributeID>DW Kart NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ff6c95d0-477e-42fc-ab12-d79cbfe3a06f">
+          <AttributeID>Sonkullanim Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5868f516-2c31-46b6-bd6d-bc44b61ab2c3">
+          <AttributeID>Guvenlik Kod</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8c548d93-384e-48fc-acfa-8fb2838f016b">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="64eec395-b021-4ece-a98f-e9b82a0556d8">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="560cd764-232d-4485-9b63-a88b1e6eade4">
+      <ID>DimtblMusteri</ID>
+      <Name>DimtblMusteri</Name>
+      <DimensionID>DimtblMusteri</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a0e1a869-2eaa-483c-9465-f37aba412284">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="33da8132-78e2-44a6-9557-44f21cfae9c9">
+          <AttributeID>DW Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="be9d4577-a09b-4aaf-87ab-6cf776a84beb">
+          <AttributeID>Musteri Ad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f85e4c19-4ac7-4d6d-ab4e-03711532e460">
+          <AttributeID>Musteri Soyad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c06a34ec-166e-4b51-a1aa-7866b3e001f1">
+          <AttributeID>Sifre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f6ade8d6-76a5-4a8b-bf75-644d8d0fe992">
+          <AttributeID>Adres</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c3f634ea-2657-4151-9cfd-84fdc2995ea6">
+          <AttributeID>Telefon</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5f99ea36-229a-45ef-bd29-aaba35e9caf7">
+          <AttributeID>e Posta Adersi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ae86f438-0af6-4c8e-9eb7-d492f1cba5a8">
+          <AttributeID>Kullanici Adi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fd701b70-96fc-481e-8730-55ced83590fe">
+          <AttributeID>Iletisim Bilgileri</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="65db89dc-3a48-459c-a0fb-3bc4d2f06d2a">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a8c5334f-df8d-473a-8f5f-8a34bcfb8e9a">
+      <ID>Musteri Ad</ID>
+      <Name>Musteri Ad</Name>
+      <DimensionID>DimtblMusteri</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="1675704a-6c36-4436-92d1-7d95201329cf">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5d13252b-c00a-41b0-821a-83759ac4ef4d">
+          <AttributeID>DW Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5ea392a9-178d-4cbe-bbcb-9ea896f97404">
+          <AttributeID>Musteri Ad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e0fbfee3-7941-4b03-b89f-ef54f6786efb">
+          <AttributeID>Musteri Soyad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="19d8a4b6-9ffd-477b-ad1a-1a50afb7ff16">
+          <AttributeID>Sifre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d1f14ea1-da7f-4571-9ac1-4de243de3149">
+          <AttributeID>Adres</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cc7ca27c-037c-48d7-b1bd-23ef69b52742">
+          <AttributeID>Telefon</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="20856651-f1c7-4d21-9345-bc6f77f9e483">
+          <AttributeID>e Posta Adersi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="91d22b6e-f27e-44c1-8729-ab441b2d7133">
+          <AttributeID>Kullanici Adi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3b0443b3-3f9f-41bf-bf64-3ce218ad356f">
+          <AttributeID>Iletisim Bilgileri</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9c1b5c8c-d3ed-4a03-9db2-75e154c137a9">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="7b7fb2d3-ce92-4667-8537-b9c3b9fa2be8">
+      <ID>Musteri Soyad</ID>
+      <Name>Musteri Soyad</Name>
+      <DimensionID>DimtblMusteri</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b5062922-b431-4df8-8336-d5bef8cf862b">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="488a74c2-a148-4862-a761-0b76476e3855">
+          <AttributeID>DW Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d8ad20b2-b884-4a6e-a397-feca93cf6546">
+          <AttributeID>Musteri Ad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ce4ec132-ab30-468e-98b0-a2516dd7a99e">
+          <AttributeID>Musteri Soyad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a91d8246-b597-49e1-a3f3-72aa95bb372a">
+          <AttributeID>Sifre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c5f31e97-5b46-48f2-a41f-ff84cc9d23c4">
+          <AttributeID>Adres</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cb95fc02-dbe1-465d-93e2-78926f38a7cd">
+          <AttributeID>Telefon</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="020a0299-b3f4-4b65-96e4-a0b8aebe6034">
+          <AttributeID>e Posta Adersi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1b746ef9-10cd-4998-a557-7869b738e8f7">
+          <AttributeID>Kullanici Adi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="29dc82a1-cc77-419d-996e-0aae328e89a7">
+          <AttributeID>Iletisim Bilgileri</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c13c221c-dca6-41ef-bd05-79b8febfe512">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="40d741fc-cff1-4279-83df-15ababcf0726">
+      <ID>Kullanici Adi</ID>
+      <Name>Kullanici Adi</Name>
+      <DimensionID>DimtblMusteri</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="dfc76d0e-aab6-4aa8-b845-cce546e6531b">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5404fb9a-606d-445f-a9c1-1e0ffbf045c2">
+          <AttributeID>DW Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e1e43362-9901-4ceb-a2b0-189a5e55b477">
+          <AttributeID>Musteri Ad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3e5c050e-0a6e-45ba-a7cc-7990d19d1d7d">
+          <AttributeID>Musteri Soyad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ce423859-1151-467d-be04-199319eab6e8">
+          <AttributeID>Sifre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="587177d5-9f0c-49af-9b4b-e4ca93943362">
+          <AttributeID>Adres</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="24a27c68-0857-4234-9086-c09e5b8f96b6">
+          <AttributeID>Telefon</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5f473bc5-fe76-4c23-9616-f2d44a567fa8">
+          <AttributeID>e Posta Adersi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a8e66409-60f6-4270-9fcd-7dfd956402c8">
+          <AttributeID>Kullanici Adi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="da0d28b9-3d7e-4ea0-85e7-498fcb41ef28">
+          <AttributeID>Iletisim Bilgileri</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="50bd4253-cb62-47ad-a6c6-465aacb5478d">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="61f424e1-5d1d-4041-bcee-6be0bf61d863">
+      <ID>Sifre 1</ID>
+      <Name>Sifre 1</Name>
+      <DimensionID>DimtblMusteri</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2bb4cc0b-d0dd-45f3-95b7-a87535a25940">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="287de2de-92e5-45e3-a176-58ca8ec8cc78">
+          <AttributeID>DW Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="346e822f-8b37-4871-b529-7b0ef3c57f68">
+          <AttributeID>Musteri Ad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="077d2b42-18fc-472d-b6ee-2bb6173e0493">
+          <AttributeID>Musteri Soyad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0b2c5834-6420-456b-9c70-4c5ff37f8386">
+          <AttributeID>Sifre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5debed1d-eb24-4655-8a72-e3e1236b1382">
+          <AttributeID>Adres</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ba9e38f4-aed4-412f-850a-8c9f51723682">
+          <AttributeID>Telefon</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4ec5e941-e3d1-467d-a4b7-fb4d82ee7866">
+          <AttributeID>e Posta Adersi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2e05dc46-2108-4722-bd67-953ac0100753">
+          <AttributeID>Kullanici Adi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9310d83c-5b89-4677-b0d1-47532914475c">
+          <AttributeID>Iletisim Bilgileri</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="826de63d-2a10-4806-a775-eb86e5841045">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d5629ccd-0737-4b10-8299-1eb143df3dd7">
+      <ID>Telefon</ID>
+      <Name>Telefon</Name>
+      <DimensionID>DimtblMusteri</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e67fa1a6-d72d-48ea-aaa1-23012a9d7bca">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a5607e4f-c363-436e-8d81-fdf38aa32208">
+          <AttributeID>DW Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3b0f9388-1f6b-42bf-a50b-0b3050654d1d">
+          <AttributeID>Musteri Ad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6dbe79a8-f9fe-40ee-acd6-d23393ed2ea2">
+          <AttributeID>Musteri Soyad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="60787864-d137-42e4-9504-af0b15d75c64">
+          <AttributeID>Sifre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9570d23a-abae-46e2-adb3-119da266fc17">
+          <AttributeID>Adres</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="de346655-3f0c-4ad6-ac66-441b1bd9e3ce">
+          <AttributeID>Telefon</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2da91eb8-2c84-4083-8348-b20c8f5533be">
+          <AttributeID>e Posta Adersi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="acca05bf-d7ba-48e2-8f62-2b98670dd234">
+          <AttributeID>Kullanici Adi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bb79992e-be88-4eeb-bddc-10d7019ca8fe">
+          <AttributeID>Iletisim Bilgileri</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="40eb8211-b7b1-479a-9868-7e4972cbfcda">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d80ec67a-c62a-49ab-a926-6e0afe45b52f">
+      <ID>Adres</ID>
+      <Name>Adres</Name>
+      <DimensionID>DimtblMusteri</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="86b84d44-5ab2-4514-89e1-2f589327f27f">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b1597ed9-6857-48df-a265-5bf35853dba8">
+          <AttributeID>DW Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="132cf4df-00ad-4187-80d5-afac9f23b888">
+          <AttributeID>Musteri Ad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c520ac1c-fa8e-48b9-a95b-086f81b69b80">
+          <AttributeID>Musteri Soyad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b0456257-3f83-483d-b185-20132714c827">
+          <AttributeID>Sifre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="76511fd9-492d-4003-9191-97a3c1bdf087">
+          <AttributeID>Adres</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1eca4315-0aea-4587-a37b-1a0af69c3b37">
+          <AttributeID>Telefon</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="058fe904-6df1-4c6c-9479-851c06df9079">
+          <AttributeID>e Posta Adersi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c9cb0331-668c-465c-b499-f64dd59f6c19">
+          <AttributeID>Kullanici Adi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f5a8d297-862d-41d2-bb57-406360dffc7a">
+          <AttributeID>Iletisim Bilgileri</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="95508a38-b3bc-4ebb-866f-2d0fb41e200a">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="71183a6e-043d-45eb-bb34-14cacfc698f0">
+      <ID>Musteri 1</ID>
+      <Name>Musteri 1</Name>
+      <DimensionID>DimtblRezervasyon</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="fb62ffdb-4110-479b-8f82-a477f6ed9fdc">
+          <AttributeID>Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2a4dceaf-e787-451e-9a09-bf59e9c2bfc1">
+          <AttributeID>DW Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a53aecfc-440e-4b79-8d0d-5329a216f746">
+          <AttributeID>Rezervasyon Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9e35cc2d-49ae-4206-828a-94abe7867865">
+          <AttributeID>Gelis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="281c390a-61ae-4a3e-b45d-6a364407dfef">
+          <AttributeID>Gidis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4bedfe6f-5d04-4763-8e6b-4e46903fb308">
+          <AttributeID>İptal Mi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f8ce6b38-8d3c-439b-ab14-258188b4f4f0">
+          <AttributeID>Erteleme Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="be6365aa-aea1-45be-a8ce-c081185af026">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ae42db98-b088-47fa-831e-a869066dfaf7">
+          <AttributeID>Kalma Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6d57adbc-6b66-41ae-8a55-c0986e947e49">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="19c035a4-ae56-408b-a4a1-c3aec5f5bff4">
+          <AttributeID>Rezervasyon Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="40335e35-a6b7-4291-a7da-02ba64b6f9d4">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b993d4a2-a020-4909-9519-679250d232ce">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="437c7204-9946-48a7-acb0-8e704536d976">
+      <ID>DimtblOda</ID>
+      <Name>DimtblOda</Name>
+      <DimensionID>DimtblOda</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3fbbb584-db1d-4d11-8b32-5e5312debaa5">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1341f5ac-c475-4c8e-9386-a6a4f544398f">
+          <AttributeID>DW Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="729e14fe-0001-4bf8-985f-c9ab605697dd">
+          <AttributeID>Bos Mu</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2349ef2d-9d18-4282-b3aa-e60b3e1636df">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5ec9a163-9980-4fa6-83e3-774f6d105223">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="b049e34d-9406-47c5-9469-28e770d7f33e">
+      <ID>Taban Fiyat</ID>
+      <Name>Taban Fiyat</Name>
+      <DimensionID>DimtblOda</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8da4decc-1b89-4d04-8e0c-0df9eb66acfe">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b2889b10-bf90-4462-8db1-8b145b182a53">
+          <AttributeID>DW Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dc2e6e94-1e58-4fde-aacb-036cb9868302">
+          <AttributeID>Bos Mu</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="472b3ce9-b500-4b95-904b-4f50582570a1">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c96ca973-1c11-4589-bccd-a3cf94af5618">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e9151ada-ee6f-4fab-9439-b4ded7d41b29">
+      <ID>e Posta Adersi 1</ID>
+      <Name>e Posta Adersi 1</Name>
+      <DimensionID>DimtblMusteri</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a73e38cf-e730-41b1-8bd4-aab3b0e0359a">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="01584abe-085c-492f-a5ad-5c23186569b0">
+          <AttributeID>DW Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="69ef7b3c-b6cd-46fb-b0ae-bbd0d93ab2f5">
+          <AttributeID>Musteri Ad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="81ee5687-5fb5-46e4-8125-e87a3e5df32d">
+          <AttributeID>Musteri Soyad</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7e840dbd-55b3-4f7b-bd7d-2274e58e1f77">
+          <AttributeID>Sifre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="95145996-ce5b-4032-9283-288112f5dfc8">
+          <AttributeID>Adres</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="58d74bd8-7300-4a47-848d-e3dff888188f">
+          <AttributeID>Telefon</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c7034a77-2afa-4024-92b5-0df140cd1ec3">
+          <AttributeID>e Posta Adersi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="819c1cc1-c3f2-4cb1-b29c-3bdcf9d0d366">
+          <AttributeID>Kullanici Adi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8822aa8f-4d78-439c-a574-fb6a03034295">
+          <AttributeID>Iletisim Bilgileri</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f94f3278-a64a-4997-b046-587b50535399">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="411036eb-d5ff-45e6-b44d-6baaea62eafd">
+      <ID>DimtblRezervasyon</ID>
+      <Name>DimtblRezervasyon</Name>
+      <DimensionID>DimtblRezervasyon</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9fdb829b-1734-4572-86ac-7feff6febfd6">
+          <AttributeID>Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ca030bfa-4379-4515-8859-89013ec90b93">
+          <AttributeID>DW Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3c1b4017-bc30-4b26-a92e-ca46489f8b66">
+          <AttributeID>Rezervasyon Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="427f6f16-0e5b-41a8-a07a-b9ca50f3789f">
+          <AttributeID>Gelis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8f7c7c6e-eaa8-4a91-ab68-aeb9ea8fb8c9">
+          <AttributeID>Gidis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="96c5e0df-a57b-4cad-854d-def209aac981">
+          <AttributeID>İptal Mi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ef67e9f3-744e-4078-801b-65bcdcd7acf7">
+          <AttributeID>Erteleme Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eb2059c0-50b9-4870-bf98-7571c9bcd176">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6bbe61bc-3b1b-4117-98b8-2c122dba1c08">
+          <AttributeID>Kalma Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="20800ff3-f181-45ab-8060-a353a783fcd1">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b6cae9c2-1be9-4f9a-9ae2-674c36016b38">
+          <AttributeID>Rezervasyon Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3ba50cda-cac6-494f-8762-32ebd90b9fa0">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="04ba9f77-6c03-47af-a798-c10e0cea5ff0">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="92841a37-67d5-404b-84d4-b9ae1ef7da3a">
+      <ID>Rezervasyon Tarih</ID>
+      <Name>Rezervasyon Tarih</Name>
+      <DimensionID>DimtblRezervasyon</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2402ecd8-306a-4de1-8a0d-d041068434e1">
+          <AttributeID>Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ce361aa3-8987-4738-8aaa-8a8073ed0a90">
+          <AttributeID>DW Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ae07a594-3977-4e20-98b2-9f243399d63a">
+          <AttributeID>Rezervasyon Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="505121fa-a808-4c8c-b7e0-756e65cc1bf4">
+          <AttributeID>Gelis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bcb4b817-1827-44b4-895a-a4b13f216b13">
+          <AttributeID>Gidis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6591d30e-5a0e-4884-bf3e-b956cc0c57e5">
+          <AttributeID>İptal Mi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e68c8637-e0fa-44f8-a169-9173f873c62d">
+          <AttributeID>Erteleme Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="84523fff-e8a2-4586-a990-57af29a785da">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="23c2235e-da50-4ee2-8cc7-fb472cfea275">
+          <AttributeID>Kalma Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7089af03-78d7-4a09-82f9-3097fdac2c51">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bc10aa8a-713d-431f-9648-1f2dfd142825">
+          <AttributeID>Rezervasyon Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="081d491e-1d88-4e3f-933e-9e4650ff8589">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="34cc436f-0ae4-471c-9b4d-0b671129031e">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c4833ecd-8b87-43fe-9f34-faaff41a6bdd">
+      <ID>Gelis Tarih</ID>
+      <Name>Gelis Tarih</Name>
+      <DimensionID>DimtblRezervasyon</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5a454a93-9f1e-4b88-a855-82923f09af12">
+          <AttributeID>Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ae437fed-de9e-4bf8-accb-d149cd1b69eb">
+          <AttributeID>DW Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d7a70411-8791-40ca-a357-e6ef3d5856ce">
+          <AttributeID>Rezervasyon Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b3546589-a0a1-4b7a-be5e-d3d7e140eb8d">
+          <AttributeID>Gelis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bb845836-0623-4b81-ae83-67db723144fa">
+          <AttributeID>Gidis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bfa1ff2b-214a-4451-ab54-0754ca424826">
+          <AttributeID>İptal Mi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aee23eee-5cf3-42bc-b0d5-5c536f843e86">
+          <AttributeID>Erteleme Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="731778ca-13c2-4106-89bc-9aeee80d826c">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="698a921b-c7e9-42ea-90d2-0e1903dbc1ca">
+          <AttributeID>Kalma Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ac6a39a1-217e-4968-b4bc-d05ad0f91449">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8d875003-455d-4f63-9c3a-1d7a00f9281d">
+          <AttributeID>Rezervasyon Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e23ef403-aa67-435c-89e3-bc3fd6cc09a5">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="918e495e-ddcc-479a-bf3c-e6b34dfbb2f8">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ae0e4f91-aacc-4608-bbc2-e5c83254356d">
+      <ID>Gidis Tarih</ID>
+      <Name>Gidis Tarih</Name>
+      <DimensionID>DimtblRezervasyon</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e3874b8a-2cef-40f3-ae31-7e79fc608e21">
+          <AttributeID>Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ec4eadd5-09ea-4e7d-a336-19eaa8265a09">
+          <AttributeID>DW Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="297f2754-7c1a-4147-ba94-2b79fd8815a0">
+          <AttributeID>Rezervasyon Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6ca43b4c-e420-4d3a-97a1-cfe80ba6007d">
+          <AttributeID>Gelis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="45bbb101-7cc7-4645-8108-ec15d1f39c9d">
+          <AttributeID>Gidis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a6e35311-c815-4867-9b9d-437f5b075f6c">
+          <AttributeID>İptal Mi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7544b264-cb1e-4696-9dc7-89958acf495c">
+          <AttributeID>Erteleme Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f80acdbe-4ef7-4c8b-8b92-7da79a010814">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e982fd41-81b4-436b-a922-c725b82da650">
+          <AttributeID>Kalma Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="04328f4e-d052-4a23-9709-27b9f3aeb533">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0daa5d04-18c5-4ca6-816c-19949182e17f">
+          <AttributeID>Rezervasyon Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0a0fc8d6-1f45-44dc-bbcb-9430c8cc215c">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cb9f86f8-6cc3-4d0b-b0cf-405f2f877691">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="6d6dd76b-22c6-440b-b9d9-1167f303ecc0">
+      <ID>Erteleme Tarih</ID>
+      <Name>Erteleme Tarih</Name>
+      <DimensionID>DimtblRezervasyon</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ce0f2faa-0a73-464d-807c-aa4c72125cb1">
+          <AttributeID>Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a5fb94e7-9268-4e39-bdf8-59e258efec17">
+          <AttributeID>DW Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1104fd82-c1ab-41ae-b6d1-16aad97aeb75">
+          <AttributeID>Rezervasyon Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c006bbb0-b974-49cc-8fd1-6d120f99e545">
+          <AttributeID>Gelis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="21393edd-c043-4c8b-bbb7-d9678b486236">
+          <AttributeID>Gidis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a56b087e-28f8-47ca-bcfb-e367726a5364">
+          <AttributeID>İptal Mi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5195ba58-5b0a-432c-8b8a-99c3353fd96e">
+          <AttributeID>Erteleme Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ea9cf5a0-51c7-4004-9ddf-f8e9ad10b67b">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="59e64616-0f2a-42b7-838d-637c0e352a72">
+          <AttributeID>Kalma Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aaa8befa-64d6-44e8-9897-d8107a741c5e">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="daa0703d-220a-41ee-bfd7-444397caf73a">
+          <AttributeID>Rezervasyon Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="77fe1072-e813-4fb4-a18f-f79ca0fc814b">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="01fdace4-30e8-43f9-9ed9-878912cfc58b">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="76e12728-0f6a-4ade-a5ad-ce5e6dda403a">
+      <ID>Oda NO</ID>
+      <Name>Oda NO</Name>
+      <DimensionID>DimtblRezervasyon</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="0073dae7-5ee9-4ef3-8fc9-b1f6dc0630bb">
+          <AttributeID>Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3ca230c3-80cd-4b11-a136-2c8e41ee214d">
+          <AttributeID>DW Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3b48231a-a6f1-4331-8335-c323157be08f">
+          <AttributeID>Rezervasyon Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1bb5a718-0c73-4f57-bd5d-8e0d2e077a81">
+          <AttributeID>Gelis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b98f5ba3-3254-41d0-af3d-e600196416c5">
+          <AttributeID>Gidis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3783cec7-7997-4475-9ca6-43f81c85cf64">
+          <AttributeID>İptal Mi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aa4ceb3a-d82c-4b63-b677-514b7bbbdca4">
+          <AttributeID>Erteleme Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="808d426d-7b49-4317-b31c-20a23e43ab05">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cc8a1628-383b-4248-8137-f3892ac01c60">
+          <AttributeID>Kalma Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a4d01841-2023-4e99-92c2-f72773646248">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="92d572ae-36cc-442d-9548-778c584cdf6d">
+          <AttributeID>Rezervasyon Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="60d8c7aa-1825-4ad9-939e-0deefc63281c">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2b5f5a56-8c9c-423e-bbaa-264acb052888">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e8a3539e-8790-43e9-b4ba-b5388a3b298b">
+      <ID>Taban Fiyat 1</ID>
+      <Name>Taban Fiyat 1</Name>
+      <DimensionID>DimtblRezervasyon</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a0787009-b400-4e65-acab-58f6c4ac0d5b">
+          <AttributeID>Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="056d60fc-1f65-4f84-8f82-ce9c7d8ac04f">
+          <AttributeID>DW Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c2f1724b-20a4-48c5-91ed-10461b388813">
+          <AttributeID>Rezervasyon Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6fdfd910-2430-457d-a7e3-7b0ca3633be1">
+          <AttributeID>Gelis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f91dedcb-58ab-4e72-87a4-46e961655a5b">
+          <AttributeID>Gidis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="993f63bc-c08c-45c1-ad55-5cc2176e4430">
+          <AttributeID>İptal Mi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e985fe8c-476d-4ed2-9aec-3cb75885cfc6">
+          <AttributeID>Erteleme Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="27554c3e-0ab4-4c7d-b252-fec7715a0a22">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8d6784a7-f13e-4cd3-918f-b77eefd1e6eb">
+          <AttributeID>Kalma Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ddadec1e-cea7-4b4d-8e0f-e4c88290e480">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d009fddd-2bef-423a-8d95-7b6112001a23">
+          <AttributeID>Rezervasyon Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="13891751-5d6e-4cd7-a80a-69ca4c0189f7">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c80806ef-8d1f-4d49-8d6d-3216818c2153">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f090a2b0-bff1-4462-8040-50dc5e7d015e">
+      <ID>İptal Mi</ID>
+      <Name>İptal Mi</Name>
+      <DimensionID>DimtblRezervasyon</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d5e158bb-b3f0-4d82-915b-fe78bfcd23ea">
+          <AttributeID>Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="70eba04a-4c3b-4fe0-89db-87043b84577b">
+          <AttributeID>DW Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e12dc06a-e308-4566-8486-cbfd9c63a4b7">
+          <AttributeID>Rezervasyon Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b4e479cc-07da-4870-aeb8-d7d479aaa1cd">
+          <AttributeID>Gelis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d7d54716-44bd-44f4-8c79-390c0e2120e9">
+          <AttributeID>Gidis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4a780187-6072-496d-a9b8-87a4950193b4">
+          <AttributeID>İptal Mi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="72029aca-7aaa-41bd-84fd-67042c3d7eee">
+          <AttributeID>Erteleme Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a017c103-dba9-466e-b527-e2389ef34727">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e0b99b35-b6a9-4f7d-9428-bcc4f2e4392c">
+          <AttributeID>Kalma Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="daed0bc3-f1e4-4e7d-89b6-806f6d86ad10">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1cc3303b-af95-4f2d-ab49-6d5b71c4509a">
+          <AttributeID>Rezervasyon Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="828ffb19-93fb-4b68-af88-e650e666092b">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="45ef9313-a1cf-449a-952d-52f34d99aef4">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="dc465652-65a7-4b7a-9055-ba2887a0ec09">
+      <ID>Rezervasyon Tipi</ID>
+      <Name>Rezervasyon Tipi</Name>
+      <DimensionID>DimtblRezervasyon</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4259f0bd-aa76-414c-a583-90698a3fa6ce">
+          <AttributeID>Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="759fff37-24ad-4c69-8c2f-99d0d58521c8">
+          <AttributeID>DW Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0599c09e-e0bb-4cc1-9243-42edbc43690a">
+          <AttributeID>Rezervasyon Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="808c8e37-fa44-41a5-9df6-e3fda5aeefb9">
+          <AttributeID>Gelis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b5278ad0-2193-498d-9652-67f66c05b390">
+          <AttributeID>Gidis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="92e5025c-ee1c-4d1e-b914-d1e1d3735f83">
+          <AttributeID>İptal Mi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ab8c914b-0b7b-418a-b777-0943bc9a74b8">
+          <AttributeID>Erteleme Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="daa318cc-8bd4-4c50-bec1-e3e4418d7071">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f9f17b61-6b02-4618-9555-4bcdbafdeba2">
+          <AttributeID>Kalma Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6de74e64-9742-43b4-bb7b-9f05aa1ef903">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="705a8c02-1234-42e9-ae71-96fcdc468f8b">
+          <AttributeID>Rezervasyon Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d18d25a5-d97b-4223-9896-de1c90c0491b">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8787b2ef-707b-454c-95ba-35ba43c0ca1e">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="71fb25ba-6575-43f2-ba3d-60ea4e6c76ef">
+      <ID>Oda No 1</ID>
+      <Name>Oda No 1</Name>
+      <DimensionID>DimtblOda</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a8f50642-ced6-4f94-8429-ef74e211c21b">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="34024027-c001-4acd-98c0-181e2b4833f7">
+          <AttributeID>DW Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fddd5584-4e2c-4083-b0f6-24430617e795">
+          <AttributeID>Bos Mu</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="064ad19d-95f5-44f5-b773-1d7c8266f431">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d0abc54d-b625-46c0-ba08-5c8a0ed2a22a">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="6f312db7-e835-436d-a1fa-00d60533537a">
+      <ID>Bos Mu</ID>
+      <Name>Bos Mu</Name>
+      <DimensionID>DimtblOda</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="26b70a30-6c4b-4cbc-8f9a-13730fba5a17">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="380549f0-620a-4846-8a59-596a01ce9ceb">
+          <AttributeID>DW Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2458a32b-279c-4f4d-b47f-c8d6a3a49ad8">
+          <AttributeID>Bos Mu</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4f2d8dc4-4c8f-42ca-b272-e3fe95b33991">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9e56346c-86b6-4986-a97b-57dde08c2d8e">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f458a602-188f-4ec6-a978-48d9e5e481b7">
+      <ID>Kalma Fiyat</ID>
+      <Name>Kalma Fiyat</Name>
+      <DimensionID>DimtblRezervasyon</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="6eb77b7b-edd6-4cfa-99ef-265e4f0fd95d">
+          <AttributeID>Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d3a209d5-bb99-422e-954d-387155cb1588">
+          <AttributeID>DW Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7bdbf570-6e4a-46bf-ab5e-4fc1bafe7faf">
+          <AttributeID>Rezervasyon Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2601f538-5475-4875-b3f6-dd40243d7c32">
+          <AttributeID>Gelis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a79801ea-c2bb-4dbd-968d-c270b135384f">
+          <AttributeID>Gidis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="23cbe24c-16ee-4c4c-b5c3-41490a665acf">
+          <AttributeID>İptal Mi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="420759b4-fd64-4f69-b3b4-0aee0acc7a86">
+          <AttributeID>Erteleme Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6b12244e-c570-48c3-8a9f-b15d204aba88">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d2e5e8df-3e78-4d3b-956a-8317c0ddbc3e">
+          <AttributeID>Kalma Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eb5b7eb5-dcc5-4da0-971b-5122c2dc6b7a">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d7abf2d0-8d66-41e7-b1a9-a4692cdfe9d9">
+          <AttributeID>Rezervasyon Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5b4f74f6-5e8a-4336-a94a-d9f76e7aa5ce">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c840aa4d-c58d-4bd3-88d5-e838ecf51ff8">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f2e61fc3-eaa6-40eb-8e0b-0a722d340743">
+      <ID>Rezervasyon</ID>
+      <Name>Rezervasyon</Name>
+      <DimensionID>DimtblRezervasyon</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2a56808f-cffe-40bb-94c7-0832d2de6a25">
+          <AttributeID>Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="54b679b2-e2ab-496b-be77-1a4fa8ad58bd">
+          <AttributeID>DW Rezervasyon ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="83b721b7-f0bd-486d-a7c4-84afea02c9cc">
+          <AttributeID>Rezervasyon Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="71f4a0cf-6806-44f6-858a-c276c484cdbc">
+          <AttributeID>Gelis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="15f990ea-d3fa-4665-83a1-151d7271c3cf">
+          <AttributeID>Gidis Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="85fa9e9a-3fca-4b08-a107-ef88a4703a43">
+          <AttributeID>İptal Mi</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d9eef479-324c-404e-bcff-6400d3945be5">
+          <AttributeID>Erteleme Tarih</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7924b488-0a4b-4d77-b5c4-efcc0adaecca">
+          <AttributeID>Taban Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="37e3ebb1-c2f2-41ad-a820-a15e6e076926">
+          <AttributeID>Kalma Fiyat</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b622ce51-7c39-4794-bd61-edf154a1ff21">
+          <AttributeID>Musteri ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="25417ad4-7897-466f-99b6-305f6a191f56">
+          <AttributeID>Rezervasyon Tipi ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="46e66279-6133-490a-a0e1-837af483fda6">
+          <AttributeID>Oda NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d1c9fe4f-9dba-4c89-829a-d857dde80bee">
+          <AttributeID>DW Insert Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="2f6b20b4-ee61-48df-a3d6-09ebeec1239f">
+      <ID>Fact Calisan</ID>
+      <Name>Fact Calisan</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="a334c80a-91f6-44ec-8f7e-c49f56426544">
+          <ID>Fact Calisan Count</ID>
+          <Name>Fact Calisan Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="f5c7dc18-7bf1-42fb-8875-807abe8763af">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="ae9021f9-f330-440c-8d4a-687c143a3098">
+              <TableID>dbo_FactCalisan</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="721f6a58-cc08-43e4-93b0-5a72f1009d52">
+          <CubeDimensionID>Calisan</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b6531e61-ca12-433f-b9d9-013e85ccf29d">
+              <AttributeID>Calisan ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6aacc7f3-4df9-4d41-8c9f-ed9334703ef9">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d1069086-153a-4865-941f-cc139809f24b">
+                    <TableID>dbo_FactCalisan</TableID>
+                    <ColumnID>CalisanID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f9499590-d975-4a48-ae72-6bdb997ba546">
+          <CubeDimensionID>Calisan Tipi</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7b4ee5ac-19a9-4afb-9bd2-59f8b34c09d4">
+              <AttributeID>Calisan Tipi ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="61e6c985-0df4-4147-9bd9-67ff03977be6">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9131485e-3239-4d2d-80cb-00da5e052d9d">
+                    <TableID>dbo_FactCalisan</TableID>
+                    <ColumnID>CalisanTipiID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bbc735c3-e8fb-4819-9f38-ff9d9f0217b6">
+          <CubeDimensionID>Calisan Ad</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="009ffdb4-687b-4043-807a-f5b6ec23a40b">
+              <AttributeID>Calisan Ad</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="34164044-c940-462f-ab13-f7a6262985a6">
+                  <DataType>WChar</DataType>
+                  <DataSize>20</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="767002ce-d7e4-466b-8023-a531eb480e3e">
+                    <TableID>dbo_FactCalisan</TableID>
+                    <ColumnID>calisanAd</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="30a991b0-3a17-4b75-80fa-599234eb4852">
+          <CubeDimensionID>Calisan Soyad</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="24f3b15d-3da8-45b2-ab7e-20988b8ce052">
+              <AttributeID>Calisan Soyad</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="60bb787d-074b-4397-b258-465f239400cf">
+                  <DataType>WChar</DataType>
+                  <DataSize>20</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="00068919-207e-4c8e-8cc8-7aca34abae33">
+                    <TableID>dbo_FactCalisan</TableID>
+                    <ColumnID>calisanSoyad</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d140a5af-b5d5-42ac-ac7e-d9fff9983f38">
+          <CubeDimensionID>e Posta Adersi</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="16bf3d83-2a47-43e2-b9dc-e52f71a22fcd">
+              <AttributeID>e Posta Adersi</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1704debb-4d37-4875-b021-30a79b5b88b5">
+                  <DataType>WChar</DataType>
+                  <DataSize>150</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ff89bd4e-8e4b-45b1-b26f-6ebe9dcb119e">
+                    <TableID>dbo_FactCalisan</TableID>
+                    <ColumnID>ePostaAdersi</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2fa86c4b-5207-4b34-9d9b-d01bcc2318a9">
+          <CubeDimensionID>Sifre</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="59da4e92-b59d-42ee-91c8-74597063f53c">
+              <AttributeID>Sifre</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d7ff84ed-7e58-48f5-9dfe-dc847f80d440">
+                  <DataType>WChar</DataType>
+                  <DataSize>20</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a1fd8424-04e5-4b06-8ea1-98a194018773">
+                    <TableID>dbo_FactCalisan</TableID>
+                    <ColumnID>Sifre</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="f86bb45b-31c9-4634-a82d-b17e4d1b9631">
+      <ID>Fact Kredi Kart</ID>
+      <Name>Fact Kredi Kart</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="99bdf5e7-7eed-4343-9278-3903bff7b914">
+          <ID>Guvenlik Kod</ID>
+          <Name>Guvenlik Kod</Name>
+          <Source dwd:design-time-name="77f94647-bce4-4501-aaf0-70a9933f103b">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="73d7cb5f-6fae-4eb2-8dd6-dd695a8fa728">
+              <TableID>dbo_FactKrediKart</TableID>
+              <ColumnID>guvenlikKod</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="16c62696-2f87-424d-a092-baff46097a6f">
+          <ID>Fact Kredi Kart Count</ID>
+          <Name>Fact Kredi Kart Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="075f060c-c696-4f49-99b3-d3f11685bbcd">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="8b858d99-9c44-47c5-a7ce-32d3d8977913">
+              <TableID>dbo_FactKrediKart</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e552ef17-9011-48ec-86c4-626d47445a6c">
+          <CubeDimensionID>DimtblKrediKart</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="09bb59be-7adc-4bb8-8d9b-a38da2041bdb">
+              <AttributeID>Kart NO</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c5ca032c-8392-47e8-b409-352d15f2c33e">
+                  <DataType>WChar</DataType>
+                  <DataSize>16</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a589e2c9-d428-40c1-8e64-8d8a8ea4fb18">
+                    <TableID>dbo_FactKrediKart</TableID>
+                    <ColumnID>kartNO</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8b80613e-71ca-4a0d-a215-4ab75a286a4d">
+          <CubeDimensionID>Sonkullanim Tarih</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d4641102-0cdb-45ad-85f0-f3b35bce47a0">
+              <AttributeID>Sonkullanim Tarih</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="14e138ba-3215-4592-8b99-e38c0051f4e8">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4efbb8be-b29c-448d-840f-a72b6910dabc">
+                    <TableID>dbo_FactKrediKart</TableID>
+                    <ColumnID>sonkullanimTarih</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9d936849-e012-4f18-85d4-155ea3df367d">
+          <CubeDimensionID>Musteri</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c92539e7-0a14-415a-98e8-8bb81c0da9a0">
+              <AttributeID>Musteri ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d9c5e554-b48d-41c3-a813-400d534db698">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="39b0973e-91e0-4ff4-8727-8df3689fd590">
+                    <TableID>dbo_FactKrediKart</TableID>
+                    <ColumnID>MusteriID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="075af1ff-aecb-4d03-957f-ab7001c4afd3">
+          <CubeDimensionID>DimtblMusteri</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3292ec9b-9c26-48a3-941a-072f25499b73">
+              <AttributeID>Musteri ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c986a51f-f078-4937-9edb-467163efe64d">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1d1e74a5-7825-46b8-925d-aee1eb6acdba">
+                    <TableID>dbo_FactKrediKart</TableID>
+                    <ColumnID>MusteriID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="24cdb32f-6c91-4982-8305-258cfe71a7b7">
+          <CubeDimensionID>Musteri Ad</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8450c676-6f78-41a9-b565-fd3882306335">
+              <AttributeID>Musteri Ad</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="79e73236-bc3f-428a-98ef-1cbd4f9bae65">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9fb9a3e6-a4e0-4858-bd64-03287a5e4367">
+                    <TableID>dbo_FactKrediKart</TableID>
+                    <ColumnID>musteriAd</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="875d13ba-f8dc-46d3-87f6-bdb504987ca6">
+          <CubeDimensionID>Musteri Soyad</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5ee71510-3e86-41f3-b5d6-ae3522c9b706">
+              <AttributeID>Musteri Soyad</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f87a2240-1b83-43cb-ba6a-b276e48f9dad">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d654e5e0-090e-43e5-a7eb-e0c42a0a2be5">
+                    <TableID>dbo_FactKrediKart</TableID>
+                    <ColumnID>musteriSoyad</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ee5aa534-6bfd-456a-8c31-6438ba87e63c">
+          <CubeDimensionID>Kullanici Adi</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="67260a3d-a3dd-4460-9201-a54770298e9a">
+              <AttributeID>Kullanici Adi</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2353d036-0cbf-40d4-806b-cf4a7f55560a">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="16d822eb-d935-444b-8d9a-8cb96ae70827">
+                    <TableID>dbo_FactKrediKart</TableID>
+                    <ColumnID>KullaniciAdi</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="31229118-c845-4aa1-ae71-d1380872d071">
+          <CubeDimensionID>Sifre 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5b2e9b8e-47e3-4387-bdfb-7b62144f044a">
+              <AttributeID>Sifre</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d81eebc4-687f-4a88-aa4c-e30fc323504a">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f6d1ed18-08cb-4476-b2f9-6ebcbe41a3b1">
+                    <TableID>dbo_FactKrediKart</TableID>
+                    <ColumnID>Sifre</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3ff63794-8ad5-4453-bcee-ef0de66e12ae">
+          <CubeDimensionID>Telefon</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0345bec6-4559-4354-aaba-f87f6fea5fdc">
+              <AttributeID>Telefon</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a3571426-dc08-4e27-8733-996055ca0d03">
+                  <DataType>WChar</DataType>
+                  <DataSize>11</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="636aa0c8-806c-4df3-8b3b-61f85f9042e8">
+                    <TableID>dbo_FactKrediKart</TableID>
+                    <ColumnID>Telefon</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b9810b69-c314-45b5-aa30-3dbbde86c3a4">
+          <CubeDimensionID>Adres</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="910a47e7-80cf-4e5e-9ed9-e1722cc80a39">
+              <AttributeID>Adres</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4ce32806-97c9-4e18-8fdf-8a2febcb6865">
+                  <DataType>WChar</DataType>
+                  <DataSize>500</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ee803de1-d9c7-4911-aab4-a669a9216ba4">
+                    <TableID>dbo_FactKrediKart</TableID>
+                    <ColumnID>Adres</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="96573ec4-de3a-4456-8428-65b95b177825">
+          <CubeDimensionID>Musteri 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b4badd54-b526-439f-bca0-7d39ffb33a73">
+              <AttributeID>Musteri ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ea384874-e75d-4745-83e3-defdc4611734">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="91024468-50c0-43d0-9d4a-79b1e12bc3b9">
+                    <TableID>dbo_FactKrediKart</TableID>
+                    <ColumnID>MusteriID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="60434063-8c3b-46df-82df-5180b4749f6e">
+      <ID>Fact Musteri</ID>
+      <Name>Fact Musteri</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="c61f4a69-b248-402d-8ba7-64bc5ec83ec2">
+          <ID>Fact Musteri Count</ID>
+          <Name>Fact Musteri Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="529debce-bd50-4129-a6d9-eeefc61eb16e">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="dcc44f66-1681-4d52-9f30-6ae8ecb0174b">
+              <TableID>dbo_FactMusteri</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="50454b0e-6629-433d-aa87-f54f341920cd">
+          <CubeDimensionID>Musteri</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3dd74eb3-cd69-4d96-925e-7ecd1ec13021">
+              <AttributeID>Musteri ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="74020d50-36b3-4330-85d2-6dccde376e63">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="94cbc743-a520-45ab-a2bf-2cf47c36887a">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>MusteriID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="51ca492e-98b5-41ca-be28-6ee96ebb7788">
+          <CubeDimensionID>DimtblOda</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="04e61df4-a1b6-46b0-8c07-1735ccd15a4c">
+              <AttributeID>Oda NO</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="aa573d95-c837-4987-8001-ded3901b7276">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ff89859a-777a-481f-ae7f-438d52fd0820">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>odaNO</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="78fe62f9-63a8-4a52-abdd-d579d02c32e6">
+          <CubeDimensionID>Taban Fiyat</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9232a344-45d3-4fcb-ae09-f1e2277d7ab2">
+              <AttributeID>Taban Fiyat</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fc3c3b23-6910-441e-bddb-2e26f1fb8239">
+                  <DataType>Double</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="09f24e11-d5a5-4710-a8e8-3fc1a37b2d45">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>tabanFiyat</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="043177a6-41c7-4bac-9602-98bd6a4ecd59">
+          <CubeDimensionID>DimtblMusteri</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6c6db20d-b35c-451b-bf0b-a9387963a888">
+              <AttributeID>Musteri ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d8ea4464-163b-43c5-968c-59fb40349b43">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b614b54f-87ac-4755-87fa-072f7d79c1ea">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>MusteriID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c7a78439-9c06-43ad-858b-e3dfd938ee26">
+          <CubeDimensionID>Musteri Ad</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="977bace8-3d9f-4bd8-bba0-b6aa557579c7">
+              <AttributeID>Musteri Ad</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="aab0a4d2-d4ce-4277-97a0-2eb6cf4ff31c">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0c90c171-8822-4e34-9a14-e326fa1e5409">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>musteriAd</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="34e1d364-7d71-4cf4-b169-6a16a71dbd07">
+          <CubeDimensionID>Musteri Soyad</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0ab7ac66-75e3-49f1-bca2-0099ca1f9b37">
+              <AttributeID>Musteri Soyad</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="04a6c634-4713-4717-9bec-260011302268">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2fcfa72a-46b2-439b-bbac-25621a41e621">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>musteriSoyad</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8f68b29d-2eb1-43cc-b696-3933db4f8986">
+          <CubeDimensionID>Kullanici Adi</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5f3631a4-c023-4f8e-b5af-8461ea99c865">
+              <AttributeID>Kullanici Adi</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f8eea41a-e7aa-4e7f-b186-ed9ea83e6b5f">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4f7c6e87-2432-4063-b1be-68324bcaf0ec">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>KullaniciAdi</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="692595ef-3f62-479b-9c3a-a9d30e2467b2">
+          <CubeDimensionID>e Posta Adersi 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4873c61a-0d24-4e60-8818-ec76853b24e9">
+              <AttributeID>e Posta Adersi</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="af360612-ad74-4ae9-b5b0-fe9f4f9d687c">
+                  <DataType>WChar</DataType>
+                  <DataSize>150</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b02d0643-f7bb-4a14-b677-38fee4e3c7df">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>ePostaAdersi</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="060e2f1d-77ca-44e6-8d09-d21c5bdda253">
+          <CubeDimensionID>Sifre 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="66b0d560-5bad-4c11-8177-01bc81f775e9">
+              <AttributeID>Sifre</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="08ead7fb-6ac2-4304-9f7a-4b8bbb5e929d">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c16b2f6b-aaf1-434b-b343-dcc8b9329511">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>Sifre</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d4f2fbb0-92c2-47c6-9105-8e56c9637b45">
+          <CubeDimensionID>Telefon</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b8b56cf7-6823-46b6-b2d4-4e8845a125ff">
+              <AttributeID>Telefon</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e3bfa8dd-2395-412b-8e6d-23f4754279b7">
+                  <DataType>WChar</DataType>
+                  <DataSize>11</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9f1b1565-8cf4-4c0f-9564-8bec30b96303">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>Telefon</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5f2b2212-587a-492a-a2ac-e42389038468">
+          <CubeDimensionID>Adres</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4f7a7939-1d35-4ad0-8ed0-43d5aa543c8f">
+              <AttributeID>Adres</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="77c9620f-1b65-4281-849f-0b75eebbe7cd">
+                  <DataType>WChar</DataType>
+                  <DataSize>500</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="83d47d87-98ec-483c-8ab2-e739504165d5">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>Adres</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ff86b093-cc5a-4881-8c43-6ff0fd94871b">
+          <CubeDimensionID>DimtblRezervasyon</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="45f7e2b3-c9cf-448c-b4ed-5f5b66039e28">
+              <AttributeID>Rezervasyon ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2dd23052-7419-4c65-a5f1-3f40873a3ed5">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c7bc6a73-404d-482c-b543-c430b0bd07db">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>rezervasyonID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="be3fa06a-f76e-427f-b8f5-cce5bfb30bac">
+          <CubeDimensionID>Rezervasyon Tarih</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c34ac902-3fbf-4380-89a3-389d603214be">
+              <AttributeID>Rezervasyon Tarih</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5fc8fb7f-1420-46e3-bc7c-ca924720d288">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="883cb3dc-6585-41f3-aded-2c7a38c4bae2">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>rezervasyonTarih</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="aa1e4e15-127c-4da9-a474-02378673c345">
+          <CubeDimensionID>Gelis Tarih</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d2fb2a46-bb38-445d-94ed-ee6ddb7e1175">
+              <AttributeID>Gelis Tarih</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="966a1450-7c0f-415c-9328-caccee950526">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5656b486-6ecc-43b0-a40d-ed266895f13b">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>gelisTarih</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ffbfc47d-613a-4a33-bd7d-744cbd421c20">
+          <CubeDimensionID>Gidis Tarih</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b10de2d4-9356-44da-9d3d-27f697ffac07">
+              <AttributeID>Gidis Tarih</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2207008d-0a7c-43a7-8ae7-b4c21b38a784">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ba952905-84ab-4a22-8312-124791b3979f">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>gidisTarih</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e368623b-8ae0-4e54-bdf5-575280a81435">
+          <CubeDimensionID>Erteleme Tarih</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3c434aba-71b6-433f-9816-69f4332dde3c">
+              <AttributeID>Erteleme Tarih</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="17e997db-d5b2-4b2b-991f-8d65626e877a">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="72cf299a-07c4-4528-a8ee-3616af1801bc">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>ertelemeTarih</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9908394b-caa5-4f26-9dac-2d10e4fa6765">
+          <CubeDimensionID>Oda NO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="dba016dc-8fac-4007-a152-e013e35e3a45">
+              <AttributeID>Oda NO</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bda31446-0e2a-4303-8314-2d20f6a59deb">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7f15d0c3-b6b6-4a3b-9c3e-113db008a274">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>odaNO</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8a218259-01ef-44a6-a560-8473a1c9d4bc">
+          <CubeDimensionID>Taban Fiyat 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1600ae3d-c0f4-428d-9f0b-5c0c566da612">
+              <AttributeID>Taban Fiyat</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7fe0ba72-1865-4e1b-aeab-0ab01946b56a">
+                  <DataType>Double</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="50706226-f04b-435f-bad8-fb446ef7b8a9">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>tabanFiyat</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b43d8e53-016f-40a2-a9df-6ee15e9b854a">
+          <CubeDimensionID>İptal Mi</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="78067f25-37dc-453c-bfd7-31401d8c39d8">
+              <AttributeID>İptal Mi</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ff31f503-c265-4b82-875a-c06916785f38">
+                  <DataType>Boolean</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="391f0d09-5f3d-4fec-8804-99ff236afe79">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>iptalMi</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a1a60150-b8b9-4cea-b63b-3052d3805295">
+          <CubeDimensionID>Rezervasyon Tipi</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b8f053ec-ea81-480e-8e83-1c1744c5cba1">
+              <AttributeID>Rezervasyon Tipi ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="82b00b0d-868f-431a-be92-aaccce6a9188">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="380ec421-dc1a-47a1-a3ee-a4d6214558f6">
+                    <TableID>dbo_FactMusteri</TableID>
+                    <ColumnID>rezervasyonTipiID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="e9036c54-71d4-492c-a982-fc93beaedf0d">
+      <ID>Fact Oda</ID>
+      <Name>Fact Oda</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="e4edabc7-6677-4244-9c45-935a26a3669a">
+          <ID>Fact Oda Count</ID>
+          <Name>Fact Oda Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="86a792a6-ca36-443f-ad76-824af1f8bfe7">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="60c5a1f2-24ab-4b8c-bf6c-be5664b8f3e9">
+              <TableID>dbo_FactOda</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="672fe5e1-edbd-4a9b-b5fc-20deee590cd1">
+          <CubeDimensionID>Oda No 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7c37e817-b1c9-49ae-b60d-91515297775e">
+              <AttributeID>Oda NO</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="36217790-d081-4c10-bbf9-cd0b589654f8">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="aba7c6c9-6af7-4244-8cba-c21e91c36ba0">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>OdaNo</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3cabca0c-a630-4b3e-a893-52498da2d80d">
+          <CubeDimensionID>Bos Mu</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="71981dd3-8a43-4e29-84e9-96257f49bd8b">
+              <AttributeID>Bos Mu</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3bd46d4e-ba87-4dfa-a8cf-12ea6b48f8d4">
+                  <DataType>Boolean</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="55c36c7c-b222-42a5-aae0-fb80c54bc99e">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>bosMu</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ce2ee26d-6f4e-4f97-b87e-b4e325892917">
+          <CubeDimensionID>Taban Fiyat</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1281cb41-4ac0-4cab-b3e1-c7650821dc05">
+              <AttributeID>Taban Fiyat</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8a729d69-a0ab-40b1-aa8b-2e637bfc507d">
+                  <DataType>Double</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3c1a0574-1196-4366-b60b-e46e4f29d7d0">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>tabanFiyat</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9f32dfd1-08d3-463f-a818-c295732446e3">
+          <CubeDimensionID>DimtblMusteri</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d7c33bfb-07d2-4185-9103-61933c5d11f1">
+              <AttributeID>Musteri ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b5b5f5fb-9208-41a0-9d86-b069a957f15d">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="adb7d703-e6b3-4ae7-960a-a6e8143c3f4a">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>musteriID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="94318f3c-eb43-40a9-90f6-475548495a08">
+          <CubeDimensionID>DimtblRezervasyon</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="daa3d21a-8367-4bf0-b886-48bfd042a754">
+              <AttributeID>Rezervasyon ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e4ab211f-998b-4afb-b871-0b513eb6009f">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fae58ab9-f930-46e4-b7fb-13028ab2b6ee">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>rezervasyonID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d949f89d-1f7a-49df-9c3f-f9bf82f278e2">
+          <CubeDimensionID>Oda NO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="203ceb85-df24-44d4-b354-81d0c7e313f6">
+              <AttributeID>Oda NO</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="94533242-15f9-44fa-aa70-fff1ad21e5e6">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="40b9d895-bb8e-4b04-b9b5-813265330f3c">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>OdaNo</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="64a62260-1350-4ddf-971f-8a1ecb8fc1e8">
+          <CubeDimensionID>Taban Fiyat 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a13635bf-de48-44ec-8e30-769686ee0201">
+              <AttributeID>Taban Fiyat</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3d23371f-406e-464b-9511-87527a53f0e8">
+                  <DataType>Double</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6af86872-a6c5-435e-bdd1-f082e95d9bd0">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>tabanFiyat</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f4b83fae-6657-4651-95a6-3594d4788892">
+          <CubeDimensionID>Musteri 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b2484936-3e80-4319-bca2-37fafb7b3508">
+              <AttributeID>Musteri ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="98b645a5-0b63-423c-b56a-d053f68685f9">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e9fcbd84-99ee-4ff1-8aeb-300508eb75d2">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>musteriID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bba2597e-f3c0-4c3e-8923-924ea1eb8e26">
+          <CubeDimensionID>Rezervasyon Tarih</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="75d0d5ea-109c-43b7-ba06-f7b508ff77e6">
+              <AttributeID>Rezervasyon Tarih</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9301c8fc-dc9a-418a-900d-26c759ca33d9">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3a4e74c7-d5e5-4ca8-95f6-059f7ee3f159">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>rezervasyonTarih</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c5920d38-aa30-401c-bd70-fe9d54fff12f">
+          <CubeDimensionID>Gelis Tarih</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="12468423-b401-4d46-8f3f-beec59d70deb">
+              <AttributeID>Gelis Tarih</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="70c9d825-ebe8-4e87-9c85-3b67588d7cd9">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="effdbb6b-c27a-4a81-a9d0-84f4a60ee704">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>gelisTarih</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0b61e8aa-ffd7-4466-bfdb-5511b5159dcd">
+          <CubeDimensionID>Gidis Tarih</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="72199e3a-16d1-4d89-99a0-f93151ec8534">
+              <AttributeID>Gidis Tarih</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bd20145c-81e8-46dd-b365-ddfb41651d16">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e37b354d-f850-4fb7-9b91-0dff46099957">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>gidisTarih</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bbcccb95-e619-4ae3-91b8-3aa1ee1c2fd8">
+          <CubeDimensionID>Kalma Fiyat</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ec21e057-5885-459e-b257-0d3c16f5cc10">
+              <AttributeID>Kalma Fiyat</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d89e9f7c-c372-479c-ab46-1e61f131ed1a">
+                  <DataType>Double</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3d078663-60d1-4e82-bacc-1d977c88c79d">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>kalmaFiyat</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5c3a7116-b8fe-4315-b37f-8e6bb0e7c0b2">
+          <CubeDimensionID>İptal Mi</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="79e21bc8-3ce0-4eac-8983-94aaede664ad">
+              <AttributeID>İptal Mi</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="90fa99a1-b7b6-4771-951e-09916bb28591">
+                  <DataType>Boolean</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="04fa42e9-0d03-4d5b-a332-9e7793c95498">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>iptalMi</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="fd72bdaf-03c3-43c0-bd35-d595d2ae45b3">
+          <CubeDimensionID>Erteleme Tarih</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c825be67-fccd-46b5-ba77-85c4bd1b16f9">
+              <AttributeID>Erteleme Tarih</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d5f3734a-b1c7-4621-ad1f-a956d0d3bce2">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6d44c5fe-180f-4070-8edd-b6d09e8d6ed0">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>ertelemeTarih</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e40bb50c-f46d-49a2-aaa9-e4781321ae82">
+          <CubeDimensionID>Rezervasyon Tipi</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f30abb92-36d3-4eae-967c-ef23a81dbd31">
+              <AttributeID>Rezervasyon Tipi ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="864097de-86a7-43a3-ac85-ffeed3003d73">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b8135edd-e6e7-4dfb-bf3a-f48a711c8916">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>rezervasyonTipiID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7dd0eb89-b669-47e7-b25f-be2f5bc6e192">
+          <CubeDimensionID>Musteri</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8f126457-89c0-4c1c-ae05-d0795d84f527">
+              <AttributeID>Musteri ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="141a457a-41e9-4c78-8f26-9632cbff032c">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cccc6073-d7fe-4075-a17d-7fbc248b13c0">
+                    <TableID>dbo_FactOda</TableID>
+                    <ColumnID>musteriID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="310b5315-f40d-4c1a-999d-ca463f9c09a4">
+      <ID>Fact Rezervasyon</ID>
+      <Name>Fact Rezervasyon</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="5471f0b6-687b-48a7-8072-867c22e6201e">
+          <ID>İndirim Yuzdesi</ID>
+          <Name>İndirim Yuzdesi</Name>
+          <Source dwd:design-time-name="288266a6-0d2e-4f0a-b144-a33776465beb">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8a877fec-c277-4a01-9f87-e8761a37fc9f">
+              <TableID>dbo_FactRezervasyon.</TableID>
+              <ColumnID>indirimYuzdesi</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="7fdda1e7-e57d-42ec-8586-3f8202750a39">
+          <ID>Fact Rezervasyon Count</ID>
+          <Name>Fact Rezervasyon Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="8f3349d4-fa03-45f8-955d-42293c7ebf6a">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="c0a46f9e-93e7-4fb6-a2c5-10b2a80e4475">
+              <TableID>dbo_FactRezervasyon.</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9d446ab1-a067-41e6-a903-7f4338d86026">
+          <CubeDimensionID>Rezervasyon</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b39db74a-73ed-4d0c-b40d-f49259e887e4">
+              <AttributeID>Rezervasyon ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="da45d2c0-b0c3-4b52-8f5e-29611f9e5e9b">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2332af7b-56b9-4072-9f5b-8bdaf5cf1f23">
+                    <TableID>dbo_FactRezervasyon.</TableID>
+                    <ColumnID>RezervasyonID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ec0a1ff4-70f9-4ed6-87f5-a9ec3ae9be1b">
+          <CubeDimensionID>Rezervasyon Tipi</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f14ed641-13ed-43c2-a83e-6eef6dd980e3">
+              <AttributeID>Rezervasyon Tipi ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="13aa884a-6333-4ad8-92a3-4e63ba1e7cb6">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="74cada84-be17-4a52-8f24-2e95356d19dd">
+                    <TableID>dbo_FactRezervasyon.</TableID>
+                    <ColumnID>RezervasyonTipiID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="dd923e84-577a-4e9b-80b0-65bb4bf1e690">
+          <CubeDimensionID>Musteri 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="dcda2c54-d707-4cc4-a045-9c1867820d4e">
+              <AttributeID>Musteri ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a528f4cd-3ce9-4109-b164-7a59bf56ee7e">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c479ea93-eac8-46d9-9528-289132f37dac">
+                    <TableID>dbo_FactRezervasyon.</TableID>
+                    <ColumnID>musteriID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="12a9a6bd-868e-407c-8e1e-7666af9db471">
+          <CubeDimensionID>Oda NO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="70166f73-1dd6-4bdd-a63e-49737736e767">
+              <AttributeID>Oda NO</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="79a320bf-4975-45f3-ba5f-d7f61c740e59">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cfc06979-823a-4169-bca0-d123a74890e5">
+                    <TableID>dbo_FactRezervasyon.</TableID>
+                    <ColumnID>odaNO</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="08026298-9f8f-4152-a272-e077cce2f0d6">
+          <CubeDimensionID>Rezervasyon Tarih</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d1d13bd5-6fde-4f24-be53-d607a7f8f34a">
+              <AttributeID>Rezervasyon Tarih</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d3e0fd7c-90aa-446b-a6b8-4fc2ca77f817">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a6dc10e6-167f-4d27-993e-6da681e5b36a">
+                    <TableID>dbo_FactRezervasyon.</TableID>
+                    <ColumnID>rezervasyonTarih</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1984a07d-a812-4317-b108-87b96d60e291">
+          <CubeDimensionID>Gelis Tarih</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ca74a507-ae61-460d-9241-8775fbe4bd9b">
+              <AttributeID>Gelis Tarih</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ac2d130f-0278-4c7d-bdbd-ac95b257da8b">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3edc2dd4-1dab-4f3d-ba53-0312ba8c250b">
+                    <TableID>dbo_FactRezervasyon.</TableID>
+                    <ColumnID>gelisTarih</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="015669a7-31a1-433e-8f6b-3d6ccaa3a4de">
+          <CubeDimensionID>Gidis Tarih</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c8ccbaf5-a81f-4325-89fd-e63f7b54aac3">
+              <AttributeID>Gidis Tarih</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7947d17f-5056-4343-8d49-59a5b8bcf69f">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0cfab524-e340-40a5-8d6d-6896b585e6bb">
+                    <TableID>dbo_FactRezervasyon.</TableID>
+                    <ColumnID>gidisTarih</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d137ccb9-8ea8-4d66-b6aa-1b8e5d712f7d">
+          <CubeDimensionID>Erteleme Tarih</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="35325309-d80e-48c3-96d1-ba81d5f2fa9b">
+              <AttributeID>Erteleme Tarih</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="56b7edbf-c5e1-4802-af92-048536b2b998">
+                  <DataType>Date</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d8c8ac7b-99a2-454d-8f04-3baf15a2b166">
+                    <TableID>dbo_FactRezervasyon.</TableID>
+                    <ColumnID>ertelemeTarih</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d41d0d1b-9839-4bf2-9b06-73a97e5b0f1b">
+          <CubeDimensionID>Kalma Fiyat</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1a55e498-8b63-4cbf-a90b-90c6ee8d3fab">
+              <AttributeID>Kalma Fiyat</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="54382f5f-7b68-4431-9877-7340fb59959e">
+                  <DataType>Double</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="509c8474-2e4f-4638-a3cc-101fe18f8a2b">
+                    <TableID>dbo_FactRezervasyon.</TableID>
+                    <ColumnID>kalmaFiyat</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="91ae6df7-74ec-43e1-bf61-1cb5b6b3e3b2">
+          <CubeDimensionID>Taban Fiyat 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="631da222-5cdb-4007-bc30-8f8560aeb4b3">
+              <AttributeID>Taban Fiyat</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d444ec02-a8b0-4dbf-9fb0-b422af1cdb56">
+                  <DataType>Double</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c1208100-2cf5-40aa-8122-eb62702cf5ab">
+                    <TableID>dbo_FactRezervasyon.</TableID>
+                    <ColumnID>tabanFiyat</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="eab434d7-2bbc-4322-a3ff-05e65d96b3ff">
+          <CubeDimensionID>DimtblMusteri</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2b90a97e-e68a-4797-b395-26c81a01fa1c">
+              <AttributeID>Musteri ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f5d26ccd-eafe-4da0-a848-243ffdbfbcb8">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7960711d-0393-40c6-99d9-973393210a68">
+                    <TableID>dbo_FactRezervasyon.</TableID>
+                    <ColumnID>musteriID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2d259645-004e-4d02-ad20-41afeb7bf75f">
+          <CubeDimensionID>DimtblOda</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="96240788-9ec2-4b4a-896e-4bd5adf82ced">
+              <AttributeID>Oda NO</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5bb60bd7-4d2f-4c35-9db9-ac1e6e934928">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a898f330-3e3f-4b62-a071-879ff0a6d149">
+                    <TableID>dbo_FactRezervasyon.</TableID>
+                    <ColumnID>odaNO</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2e58d1f7-5065-41a3-8994-2733a9196221">
+          <CubeDimensionID>Taban Fiyat</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5c87dd5c-8ef3-4e2b-a05a-d88b964efacd">
+              <AttributeID>Taban Fiyat</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9225a408-b917-409f-b443-c888d1437713">
+                  <DataType>Double</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="05e6a755-a4a1-490d-a08f-d998ec8084b2">
+                    <TableID>dbo_FactRezervasyon.</TableID>
+                    <ColumnID>tabanFiyat</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="cd5bd910-fe46-439c-b27c-b8e694646f95">
+          <CubeDimensionID>Musteri</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="37d81908-eac2-43a2-b42b-4f59f85f8d15">
+              <AttributeID>Musteri ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b13cbcc0-b27b-4a88-a5e7-ddf38be24026">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fa6e767d-a9f7-43bd-a815-a3c1f28fe3bc">
+                    <TableID>dbo_FactRezervasyon.</TableID>
+                    <ColumnID>musteriID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="88c51a92-7d6e-452c-bdc4-653887dd2ad0">
+    <DataSourceViewID>DWHViews</DataSourceViewID>
+  </Source>
+</Cube>

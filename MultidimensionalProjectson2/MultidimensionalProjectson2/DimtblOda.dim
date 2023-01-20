@@ -1,0 +1,160 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="cb51f847-c4b2-43da-bbf9-a6e3b55c3aa4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DimtblOda</ID>
+  <Name>DimtblOda</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="0f7882c9-6680-4fe8-b284-704c30e90720">
+    <DataSourceViewID>DWHViews</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="96e06841-3ba9-4e2c-bc1c-64f1d18c5b13">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="49dbad05-45fc-4d33-82bb-b1e7eb51000c">
+      <ID>Oda NO</ID>
+      <Name>Oda NO</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="87d50779-64dd-40eb-ac6a-a1d08a32b54c">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9b42ebd1-10d3-4e5f-a741-b5aeee09fcd1">
+            <TableID>dbo_DimtblOda</TableID>
+            <ColumnID>odaNO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="959f89f7-6e52-4f62-9a8f-34486c45cd33">
+          <AttributeID>DW Oda NO</AttributeID>
+          <Name>DW Oda NO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6d4174c2-d84b-44d4-a462-8d5b1016f560">
+          <AttributeID>Bos Mu</AttributeID>
+          <Name>Bos Mu</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c8ffeb45-267d-49f2-8384-c8423ed24370">
+          <AttributeID>Taban Fiyat</AttributeID>
+          <Name>Taban Fiyat</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d070e2fe-6515-4d2c-b1ea-03504ba3ce27">
+          <AttributeID>DW Insert Date</AttributeID>
+          <Name>DW Insert Date</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9bcf062b-d754-43bc-b235-5b803df81528">
+      <ID>DW Oda NO</ID>
+      <Name>DW Oda NO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d9c46e56-7f65-4904-ace7-cec6d0b01c95">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="67b983a5-b084-48a9-a2b3-aa8f5d2a37cc">
+            <TableID>dbo_DimtblOda</TableID>
+            <ColumnID>DWOdaNO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="81d64683-915a-4857-8bec-9ebefff74521">
+      <ID>Bos Mu</ID>
+      <Name>Bos Mu</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3df6fe4c-bf2c-4e33-8dbc-197bafb5b285">
+          <DataType>Boolean</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7a324061-eeb8-439c-b1c2-29faae0b9d52">
+            <TableID>dbo_DimtblOda</TableID>
+            <ColumnID>bosMu</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d8a19f9f-f682-44c1-88f5-b7708181d14b">
+      <ID>Taban Fiyat</ID>
+      <Name>Taban Fiyat</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ea70ce01-fb78-489c-bc49-18ea54c7772e">
+          <DataType>Double</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8e851fd6-28f5-4c89-b833-4ea7535efffb">
+            <TableID>dbo_DimtblOda</TableID>
+            <ColumnID>tabanFiyat</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="002e881d-2ced-4b9f-b961-9f6d51484d24">
+      <ID>DW Insert Date</ID>
+      <Name>DW Insert Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="20bf7e91-c7ed-46e0-ba20-eb2ac4d7698a">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a7e5a1b5-7505-426f-8340-1a783466724b">
+            <TableID>dbo_DimtblOda</TableID>
+            <ColumnID>DWInsertDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

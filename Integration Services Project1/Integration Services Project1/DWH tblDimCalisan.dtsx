@@ -1,0 +1,644 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/9/2022 3:18:13 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-1E3PP0A"
+  DTS:CreatorName="DESKTOP-1E3PP0A\gbh"
+  DTS:DTSID="{613040B0-6EB4-43DF-B988-7FB6146AFC11}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.948.0"
+  DTS:LocaleID="1055"
+  DTS:ObjectName="DWH tblDimCalisan"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{93381061-F6D6-4A39-8AD5-A3F2677AE3E2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.DWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E6D0BF26-DA1E-4774-838A-1303D7643844}"
+      DTS:ObjectName="LocalHost.DWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{E6D0BF26-DA1E-4774-838A-1303D7643844}LocalHost.DWH;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.DWH 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1E414BC0-14CD-4AE2-8D8D-0FE417D777F7}"
+      DTS:ObjectName="LocalHost.DWH 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{1E414BC0-14CD-4AE2-8D8D-0FE417D777F7}LocalHost.DWH 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.DWH 2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3EC91CDD-D426-4FC0-B177-0CC70800C226}"
+      DTS:ObjectName="LocalHost.DWH 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{3EC91CDD-D426-4FC0-B177-0CC70800C226}LocalHost.DWH 2;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.STAGING]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EFC852FA-5B0F-4981-B0F1-3F72368880D8}"
+      DTS:ObjectName="LocalHost.STAGING">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=STAGING;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{EFC852FA-5B0F-4981-B0F1-3F72368880D8}LocalHost.STAGING;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{934EE874-E49A-4BA1-BC4E-30DB61D0BDE3}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\DWH tblDimCalisan Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DWH tblDimCalisan Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimtblCalisan]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1254</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.DWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].Columns[calisanID]"
+                      cachedDataType="i4"
+                      cachedName="calisanID"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].ExternalColumns[calisanID]"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[calisanID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].Columns[calisanAd]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="calisanAd"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].ExternalColumns[calisanAd]"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[calisanAd]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].Columns[calisanSoyad]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="calisanSoyad"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].ExternalColumns[calisanSoyad]"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[calisanSoyad]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].Columns[Sifre]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Sifre"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sifre]"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[Sifre]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].Columns[calisanTipiID]"
+                      cachedDataType="i4"
+                      cachedName="calisanTipiID"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].ExternalColumns[calisanTipiID]"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[calisanTipiID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].Columns[ePostaAdersi]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="ePostaAdersi"
+                      externalMetadataColumnId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].ExternalColumns[ePostaAdersi]"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[ePostaAdersi]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].ExternalColumns[DWCalisanID]"
+                      dataType="i4"
+                      name="DWCalisanID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].ExternalColumns[calisanID]"
+                      dataType="i4"
+                      name="calisanID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].ExternalColumns[calisanAd]"
+                      dataType="wstr"
+                      length="20"
+                      name="calisanAd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].ExternalColumns[calisanSoyad]"
+                      dataType="wstr"
+                      length="20"
+                      name="calisanSoyad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sifre]"
+                      dataType="wstr"
+                      length="20"
+                      name="Sifre" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].ExternalColumns[calisanTipiID]"
+                      dataType="i4"
+                      name="calisanTipiID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].ExternalColumns[ePostaAdersi]"
+                      dataType="wstr"
+                      length="150"
+                      name="ePostaAdersi" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input].ExternalColumns[DWInsertDate]"
+                      dataType="dbTimeStamp"
+                      name="DWInsertDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DWH tblDimCalisan Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DWH tblDimCalisan Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DWH tblDimCalisan Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\STG tblCalisan Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="STG tblCalisan Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT  [calisanID]
+      ,[calisanAd]
+      ,[calisanSoyad]
+      ,[Sifre]
+      ,[calisanTipiID]
+      ,[ePostaAdersi]
+  FROM [dbo].[tblCalisan]</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1254</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\STG tblCalisan Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.STAGING]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.STAGING]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[calisanID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].ExternalColumns[calisanID]"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[calisanID]"
+                      name="calisanID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[calisanAd]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].ExternalColumns[calisanAd]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[calisanAd]"
+                      name="calisanAd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[calisanSoyad]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].ExternalColumns[calisanSoyad]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[calisanSoyad]"
+                      name="calisanSoyad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[Sifre]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].ExternalColumns[Sifre]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[Sifre]"
+                      name="Sifre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[calisanTipiID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].ExternalColumns[calisanTipiID]"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[calisanTipiID]"
+                      name="calisanTipiID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[ePostaAdersi]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].ExternalColumns[ePostaAdersi]"
+                      length="150"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].Columns[ePostaAdersi]"
+                      name="ePostaAdersi"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].ExternalColumns[calisanID]"
+                      dataType="i4"
+                      name="calisanID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].ExternalColumns[calisanAd]"
+                      dataType="wstr"
+                      length="20"
+                      name="calisanAd" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].ExternalColumns[calisanSoyad]"
+                      dataType="wstr"
+                      length="20"
+                      name="calisanSoyad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].ExternalColumns[Sifre]"
+                      dataType="wstr"
+                      length="20"
+                      name="Sifre" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].ExternalColumns[calisanTipiID]"
+                      dataType="i4"
+                      name="calisanTipiID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output].ExternalColumns[ePostaAdersi]"
+                      dataType="wstr"
+                      length="150"
+                      name="ePostaAdersi" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[calisanID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[calisanID]"
+                      name="calisanID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[calisanAd]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[calisanAd]"
+                      name="calisanAd" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[calisanSoyad]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[calisanSoyad]"
+                      name="calisanSoyad" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[Sifre]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[Sifre]"
+                      name="Sifre" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[calisanTipiID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[calisanTipiID]"
+                      name="calisanTipiID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[ePostaAdersi]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[ePostaAdersi]"
+                      name="ePostaAdersi" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\DWH tblDimCalisan Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\STG tblCalisan Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{12185E2C-AA49-492D-A39B-542394F7F0F8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{E6D0BF26-DA1E-4774-838A-1303D7643844}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE DimtblCalisan" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{F9E24632-9A35-4A32-BB6B-E7DF2A7A21EA}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Data Flow Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="177.142860159582,87.94117770393" />
+        <NodeLayout
+          Size="162.4,52"
+          Id="Package\Execute SQL Task"
+          TopLeft="161.428574177684,3.82352946538827" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="242.628574177684,55.8235294653883">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.714285981898,32.1176482385417"
+              Start="0,0"
+              End="9.714285981898,24.6176482385417">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.0588241192709" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.0588241192709"
+                    Point2="0,16.0588241192709"
+                    Point3="4,16.0588241192709" />
+                  <mssgle:LineSegment
+                    End="5.714285981898,16.0588241192709" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.714285981898,16.0588241192709"
+                    Point2="9.714285981898,16.0588241192709"
+                    Point3="9.714285981898,20.0588241192709" />
+                  <mssgle:LineSegment
+                    End="9.714285981898,24.6176482385417" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\Data Flow Task\STG tblCalisan Source"
+          TopLeft="105.714287514589,19.882353220019" />
+        <NodeLayout
+          Size="225.6,41.6"
+          Id="Package\Data Flow Task\DWH tblDimCalisan Destination"
+          TopLeft="113.571430505538,91.0000012762407" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="196.514287514589,61.482353220019">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="29.8571429909491,29.5176480562217"
+              Start="0,0"
+              End="29.8571429909491,22.0176480562217">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.7588240281109" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.7588240281109"
+                    Point2="0,14.7588240281109"
+                    Point3="4,14.7588240281109" />
+                  <mssgle:LineSegment
+                    End="25.8571429909491,14.7588240281109" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.8571429909491,14.7588240281109"
+                    Point2="29.8571429909491,14.7588240281109"
+                    Point3="29.8571429909491,18.7588240281109" />
+                  <mssgle:LineSegment
+                    End="29.8571429909491,22.0176480562217" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\DWH tblDimCalisan Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\STG tblCalisan Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
